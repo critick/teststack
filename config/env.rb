@@ -46,7 +46,7 @@ World(Rack::Test::Methods)
 #For SSHConnections
 require 'sshkit'
 require 'sshkit/dsl'
-require 'remote'
+#require 'remote'
 
 #For postgres connections
 #require 'pg'
@@ -78,13 +78,11 @@ require_all 'pages'
 
 require 'test_data'
 
-
 #for Adding Library files during execution
 require 'pos_settings'
 
 ##For the common handling api's ,load all helpers
 #require_all 'helpers'
-
 
 
 case ENV['APP']
@@ -93,9 +91,9 @@ case ENV['APP']
 
         case ENV['OS']
           when "android"
-            capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config/tinyowl/android", 'appium.txt')
+            capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config/example/android", 'appium.txt')
           when "ios"
-            capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config/tinyowl/ios", 'appium.txt')
+            capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config/example/ios", 'appium.txt')
           else
           capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config", 'appium.txt')
         end
@@ -103,8 +101,8 @@ case ENV['APP']
 
         Before  { $driver.start_driver }
 
-         Appium.promote_singleton_appium_methods Pages::TinyOwlApp
-         Appium.promote_singleton_appium_methods Pages::TinyOwliosApp
+         #Appium.promote_singleton_appium_methods Pages::App
+         #Appium.promote_singleton_appium_methods Pages::iosApp
         After   { $driver.driver_quit }
 
    when "web"

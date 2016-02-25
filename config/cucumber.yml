@@ -1,39 +1,21 @@
 <%
-  config_requires        = "--require config --require step_definitions/api "
-  posweb_requires        = config_requires + "--require step_definitions/posweb"
-  promotion_requires     = config_requires + "--require config --require step_definitions/central"
-  central_requires       = config_requires + "--require config --require step_definitions/central"
+  config_requires        = "--require config --require step_definitions/api"
   mobile_requires        = config_requires + "--require step_definitions/mobile"
-  level0_requires        = config_requires + "--require step_definitions/api"
-  posapp_requires        = config_requires + "--require step_definitions/posapp"
-  deploy_requires        = "--require config --require step_definitions/deploy"
+  forumapi_requires      = config_requires + "--require step_definitions/forumapi"
   smoke_requires         = "--require config --require step_definitions/smoke"
   production_requires    = "--require config --require step_definitions/posweb"
   pending_requires       = "--require config --require step_definitions/posweb"
-  webproduct_requires    = "--require config --require step_definitions/webproduct"
-  tinyowlapp_requires    = config_requires + "--require step_definitions/tinyowlapp"
-  tinyowliosapp_requires = config_requires + "--require step_definitions/tinyowliosapp"
 %>
 
 
 default    : <%= config_requires %> --format pretty
-ci         : <%= posweb_requires %> --format json -o cucumber.json --tags @ci
 mobile     : <%= mobile_requires %> --format progress --tags @mobile
-level0     : <%= level0_requires %> --format json -o cucumber.json --format pretty --tags @level0
-posweb     : <%= posweb_requires %> --format json -o cucumber.json --format pretty --tags @web
-central    : <%= central_requires %> --format json -o cucumber.json --format pretty --tags @central
-posapp     : <%= posapp_requires %> --format json -o cucumber.json --format pretty --tags @posapp
-deploy     : <%= deploy_requires %>--format html --out reports/pending_report.html --format pretty  --tags @deploy
+forumapi   : <%= forumapi_requires %> --format json -o cucumber.json --format pretty --tags @forumapi
 smoke      : <%= smoke_requires %> --format html --out reports/pending_report.html --format pretty  --tags @smoke
 production : <%= production_requires %> --format json -o cucumber.json --format pretty --tags @production
 pending    : <%= pending_requires %> --format html --out reports/pending_report.html --format pretty --tags @pending
-webproduct : <%= webproduct_requires %> --format json -o cucumber.json --format pretty --tags @webproduct
-promotion  : <%= promotion_requires %> --format json -o cucumber.json --format pretty --tags @promotion
-tinyowlapp : <%= tinyowlapp_requires %> --format json -o cucumber.json --format pretty --tags @tinyowlapp
-tinyowliosapp : <%= tinyowliosapp_requires %> --format json -o cucumber.json --format pretty --tags @tinyowliosapp
-prod_level0     : <%= level0_requires %> --format json -o cucumber.json --format pretty --tags @prod_level0
 
-#old: SERVER= "https://restaurants-release.tinyowl.com"
+#old: SERVER= "https://example.com"
 
 #for rerun use below options
 #$​cucumber -f pretty -f html --out report.html -f rerun --out rerun.txt​

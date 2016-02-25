@@ -8,18 +8,6 @@ module Pages
                @params    =  params
            end
 
-          def set_platform (platform)
-              @platform = platform
-              case @platform
-                  when "ANDROID"
-                  @version = @fixture["app_version_android"]
-                  when "IOS"
-                  @version = @fixture["app_version_ios"]
-                  when "WEB"
-                  @version = @fixture["app_version_web"]
-              end
-           end
-
           def response_status
               @response_status
           end

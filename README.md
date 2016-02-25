@@ -296,7 +296,7 @@ https://github.com/Flutterbee/example-web-automation/wiki/Adding-New-Tests
 https://github.com/Flutterbee/example-web-automation/wiki
 
 ## Repo Owner
-qa@example.com
+irfan.ahmad@upgrad.com
 
 ## Contributing
 

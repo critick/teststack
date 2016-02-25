@@ -1,0 +1,83 @@
+{
+  "order": {
+    "failed_promo_codes": [],
+    "_id": "41a4dfa3-5ef6-4776-8223-3e428694abad",
+    "total_amount": 36,
+    "number_of_items": 1,
+    "address_id": 519336,
+    "restaurant_id": "566016b4123fea1f75000105",
+    "min_delivery_amount": 10,
+    "restaurant_name": "Releas 3 12",
+    "restaurant_area": "5Th Block",
+    "delivery_duration": 1800,
+    "total_discount": 0,
+    "payable_amount": 36,
+    "delivery_charges": 10,
+    "packaging_charges": 1,
+    "offers_by_restaurant": 0,
+    "offers_by_tinyowl": 0,
+    "offer_ids": [],
+    "promo_codes": [],
+    "is_gift_order": false,
+    "created_at": 0,
+    "show_questions": false,
+    "order_status": "DRAFT",
+    "delivery_type": "DEFAULT",
+    "placed_from_device": false,
+    "total_offers_by_tinyowl": 0,
+    "total_offers_by_restaurant": 0,
+    "rewarded_tinyowl_money": 0,
+    "total_rewarded_tinyowl_money": 0,
+    "restaurant_logo_url": "https://dv7xwibs05aww.cloudfront.net/images/images/120775/medium_square?1448099017",
+    "phone_no": [
+      "+911231231231",
+      "+918025526983"
+    ],
+    "is_question_submitted": false,
+    "is_slotted_order": false,
+    "order_notifications": [],
+    "order_status_events": [],
+    "is_group_order": false,
+    "discounted_amount": 36,
+    "paid_by_card": 0,
+    "paid_by_cod": 36,
+    "paid_by_net_banking": 0,
+    "paid_by_coins": 0,
+    "paid_by_wallet": 0,
+    "paid_by_tinyowl_money": 0,
+    "cart": {
+      "amount": 25,
+      "number_of_items": 1,
+      "discount": 0,
+      "offers_by_restaurant": 0,
+      "offers_by_tinyowl": 0,
+      "total_discount": 0,
+      "order_id": "41a4dfa3-5ef6-4776-8223-3e428694abad",
+      "order_items": [
+        {
+          "id": "54be5af9-f7b7-4eba-a1d7-a7441a054d7c",
+          "item_size_id": "566016b9123fea1f75000277",
+          "item_id": "566016b9123fea1f75000276",
+          "name": "Orange Juice",
+          "base_price": 25,
+          "total_price": 25,
+          "quantity": 1,
+          "size": "None",
+          "discount": 0,
+          "offers_by_restaurant": 0,
+          "offers_by_tinyowl": 0,
+          "veg_type": "NEUTRAL",
+          "cart_id": "87d671fc-f2d8-4013-8da4-67b99a91edaf",
+          "order_item_choices": []
+        }
+      ]
+    }
+  },
+  "payment": {
+    "method": "COD",
+    "bring_change": 100,
+    "sdk": "TINYOWL_DEFAULT"
+  },
+  "session_token": "290233UmADHMv44w05f7AqNZAYlK8BVslrMN8ZgKylPAKnA7IzbE4wNd7Kp4Rdd053yZ8qGP1mBsDNDSijRdqNkEzwqgNN",
+  "device_id": "285c3ff52aa28296"
+}

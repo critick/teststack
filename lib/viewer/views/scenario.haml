@@ -1,0 +1,31 @@
+%h2
+  %a{"href" => '../'}
+    = @feature.gherkin["name"]
+%h2
+  = @scenario["name"]
+  - if @scenario["tags"]
+    = haml :tag_links, {:locals => {:tags => @scenario["tags"]}, :layout => false}
+- if @background
+  %h3
+    = @background["keyword"] + ":"
+  - @background["steps"].each do |step|
+    %p
+      %span.step-keyword
+        &= step["keyword"]
+      = step["name"]
+- if @scenario["steps"]
+  %h3 Steps:
+  - @scenario["steps"].each do |step|
+    %p
+      %span.step-keyword
+        = step["keyword"]
+      = escape_once(step["name"])
+      - if step["rows"]
+        = haml :table, {:locals => {:rows => step["rows"]}, :layout => false}
+- else
+  %p{:class => 'alert-message error'}
+    = "Where's viewer? This scenario has no steps!?"
+- if @scenario["examples"]
+  %h3 Examples:
+  = haml :table, {:locals => {:rows => @scenario["examples"].first["rows"]}, :layout => false}
+

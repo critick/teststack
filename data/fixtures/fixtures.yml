@@ -1,0 +1,57 @@
+consumer_app:
+  session_token:       "290233UmADHMv44w05f7AqNZAYlK8BVslrMN8ZgKylPAKnA7IzbE4wNd7Kp4Rdd053yZ8qGP1mBsDNDSijRdqNkEzwqgNN"
+  device_id:           "285c3ff52aa28296"
+  app_version:         "3.6.8"
+  platform:            "ANDROID"
+  address_details:     "1234 ,Building"
+  locality_name:       "Indian Institute of Technology Bombay, Powai, IIT Area, Mumbai, Maharashtra, India"
+  locality_id:         "11836"
+  longitude:           72.90766689999998
+  latitude:            19.1310498
+  landmark:            "opp lakshmi restaurant"
+  app_version_android: "3.7.0"
+  app_version_ios:     "1.8.2"
+  app_version_web:     "1.0.0"
+  place_id:            "ChIJS43_8eTH5zsRP9UeFbyEptA"
+  item_magicfridge:    "556c6b8a422910b516000913"
+
+central:
+  id: 2
+  name: Test2
+  3pl_resto_id: "5366592fa29bfdf1010002ce"
+  user_first_name: "Hemant"
+  user_email: "hemant.o@tinyowl.co.in"
+  user_address_id: 520227
+  restaurant_form_id: "BLR-ELCT-0065"
+  session_token: "93035L4PmQqefs2fdzhrStZo2rw3nJCxwjq7YVkIRbTVv7NqIksBzx95S71qu3Vz8E9gOISxzLDkaGn3DsTR7ER0HzgMM"
+
+
+
+chef_details:
+    contact_number:  '9898989898'
+    email:           'test@tinyowl.co.in'
+    address:         'Test address'
+    latitude:        19.1200
+    longitude:       72.9100
+    about:           'About chef'
+    tinyowl_session: 'BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJWI5NDgzMmEwODU0NWNlZjEzOTRhNmEyNmMzMWRjZDY2BjsAVEkiEnNlc3Npb25fdG9rZW4GOwBGSSJjMjkwMjMzVW1BREhNdjQ0dzA1ZjdBcU5aQVlsSzhCVnNsck1OOFpnS3lsUEFLbkE3SXpiRTR3TmQ3S3A0UmRkMDUzeVo4cUdQMW1Cc0RORFNpalJkcU5rRXp3cWdOTgY7AFRJIhBfY3NyZl90b2tlbgY7AEZJIjFwb2tEU29uNHZjTCszOVNSSytyV3lFWEdXSkhCSE5oTzZRM1c3RWdBd3JRPQY7AEY%3D--fda5fc2c72d20e735c6f3a2872ed4de14d30e5d5'
+    id:             10
+
+
+menu_planner:
+    restaurant_id: '5659a47b123fea02eb000068'
+    menu_category_id: '5659a47b123fea02eb00006e'
+    item_id: '56c32bbf123feacf5b00008e'
+    session_token: '520996nitTUtaobJKVI3a2Ik7WE2BarIfVHgm3j3YGHvVLdAN0vgwkzqQC215aEFOURWgQ0LRj2osqWPp9KewFzTCh4wJJ'
+    tinyowl_session: 'BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJWI5NDgzMmEwODU0NWNlZjEzOTRhNmEyNmMzMWRjZDY2BjsAVEkiEnNlc3Npb25fdG9rZW4GOwBGSSJjMjkwMjMzVW1BREhNdjQ0dzA1ZjdBcU5aQVlsSzhCVnNsck1OOFpnS3lsUEFLbkE3SXpiRTR3TmQ3S3A0UmRkMDUzeVo4cUdQMW1Cc0RORFNpalJkcU5rRXp3cWdOTgY7AFRJIhBfY3NyZl90b2tlbgY7AEZJIjFwb2tEU29uNHZjTCszOVNSSytyV3lFWEdXSkhCSE5oTzZRM1c3RWdBd3JRPQY7AEY%3D--fda5fc2c72d20e735c6f3a2872ed4de14d30e5d5'
+
+pos_app:
+  session_token:     "520996nitTUtaobJKVI3a2Ik7WE2BarIfVHgm3j3YGHvVLdAN0vgwkzqQC215aEFOURWgQ0LRj2osqWPp9KewFzTCh4wJJ"
+  non_homemade_session_token:     "290233UmADHMv44w05f7AqNZAYlK8BVslrMN8ZgKylPAKnA7IzbE4wNd7Kp4Rdd053yZ8qGP1mBsDNDSijRdqNkEzwqgNN"
+  homemade_resto_id: "5659a47b123fea02eb000068"
+  item_size_id: "5659a47b123fea02eb000078"
+
+android_app:
+    login_name: 'Ulhas'
+    login_number:  '9892067139'
+    email:           'ulhas@tinyowl.co.in'

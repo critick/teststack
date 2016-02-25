@@ -1,0 +1,96 @@
+{
+  "order_id": "568ba0cc123feaadfe00027a",
+  "order": {
+    "failed_promo_codes": [
+
+    ],
+    "_id": "02f0afba-e9f1-4be8-ba3b-5943f98f5240",
+    "total_amount": 440,
+    "number_of_items": 4,
+    "address_id": 520076,
+    "restaurant_id": "5366592fa29bfdf1010002ce",
+    "min_delivery_amount": 10,
+    "restaurant_name": "Data Lebanese Point Opinio 3Pl",
+    "restaurant_area": "Powai",
+    "delivery_duration": 1800,
+    "total_discount": 100,
+    "payable_amount": 446,
+    "delivery_charges": 40,
+    "packaging_charges": 0,
+    "service_tax": 5.8,
+    "offers_by_restaurant": 0,
+    "offers_by_tinyowl": 100,
+    "offer_ids": [
+
+    ],
+    "promo_codes": [
+      "TAX100"
+    ],
+    "is_gift_order": false,
+    "created_at": 0,
+    "show_questions": false,
+    "order_status": "DRAFT",
+    "delivery_type": "DEFAULT",
+    "placed_from_device": false,
+    "total_offers_by_tinyowl": 100,
+    "total_offers_by_restaurant": 0,
+    "rewarded_tinyowl_money": 0,
+    "total_rewarded_tinyowl_money": 0,
+    "restaurant_logo_url": "https:\/\/dv7xwibs05aww.cloudfront.net\/images\/images\/98573\/medium_square?1445871276",
+    "phone_no": [
+      "+911231231231"
+    ],
+    "is_question_submitted": false,
+    "is_slotted_order": false,
+    "order_notifications": [
+
+    ],
+    "order_status_events": [
+
+    ],
+    "is_group_order": false,
+    "discounted_amount": 340,
+    "paid_by_card": 0,
+    "paid_by_cod": 0,
+    "paid_by_net_banking": 0,
+    "paid_by_coins": 0,
+    "paid_by_wallet": 0,
+    "paid_by_tinyowl_money": 0,
+    "cart": {
+      "amount": 400,
+      "number_of_items": 4,
+      "discount": 0,
+      "offers_by_restaurant": 0,
+      "offers_by_tinyowl": 0,
+      "total_discount": 0,
+      "order_id": "02f0afba-e9f1-4be8-ba3b-5943f98f5240",
+      "order_items": [
+        {
+          "id": "4ff3e56c-8425-4b5e-af5f-6abbccfceb95",
+          "item_size_id": "53665a0ea29bfdf101000302",
+          "item_id": "53665a0ea29bfdf101000300",
+          "name": "Falafel Roll",
+          "base_price": 100,
+          "total_price": 100,
+          "quantity": 4,
+          "size": "None",
+          "discount": 0,
+          "offers_by_restaurant": 0,
+          "offers_by_tinyowl": 0,
+          "veg_type": "VEG",
+          "cart_id": "333f354b-1b2c-4674-9560-32bdff12e075",
+          "order_item_choices": [
+
+          ]
+        }
+      ]
+    },
+    "condition_id": "566bfa8c123fea475e000021",
+    "reward_id": "566bfa8c123fea475e000024"
+  },
+  "place_id": "ChIJLYufSOXH5zsRK1aMQKwb59k",
+  "app_version": "3.6.8",
+  "platform": "ANDROID",
+  "session_token": "93035L4PmQqefs2fdzhrStZo2rw3nJCxwjq7YVkIRbTVv7NqIksBzx95S71qu3Vz8E9gOISxzLDkaGn3DsTR7ER0HzgMM",
+  "device_id": "61c36231ec3301b4"
+}

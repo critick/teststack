@@ -1,0 +1,94 @@
+{
+  "order": {
+    "failed_promo_codes": [
+
+    ],
+    "total_amount": 100,
+    "number_of_items": 1,
+    "address_id": 520227,
+    "restaurant_id": "5366592fa29bfdf1010002ce",
+    "min_delivery_amount": 0,
+    "restaurant_name": "Data Lebanese Point Opinio 3Pl",
+    "restaurant_area": "Powai",
+    "delivery_duration": 6000,
+    "total_discount": 0,
+    "payable_amount": 0,
+    "delivery_charges": 0,
+    "packaging_charges": 0,
+    "offers_by_restaurant": 0,
+    "offers_by_tinyowl": 0,
+    "offer_ids": [
+
+    ],
+    "promo_codes": [
+
+    ],
+    "is_gift_order": false,
+    "created_at": 0,
+    "show_questions": false,
+    "order_status": "DRAFT",
+    "delivery_type": "DEFAULT",
+    "placed_from_device": false,
+    "total_offers_by_tinyowl": 0,
+    "total_offers_by_restaurant": 0,
+    "rewarded_tinyowl_money": 0,
+    "total_rewarded_tinyowl_money": 0,
+    "restaurant_logo_url": "https:\/\/dv7xwibs05aww.cloudfront.net\/images\/images\/98573\/medium_square?1445871276",
+    "phone_no": [
+      "+911231231231"
+    ],
+    "is_question_submitted": false,
+    "is_slotted_order": false,
+    "order_notifications": [
+
+    ],
+    "order_status_events": [
+
+    ],
+    "is_group_order": false,
+    "discounted_amount": 100,
+    "paid_by_card": 0,
+    "paid_by_cod": 0,
+    "paid_by_net_banking": 0,
+    "paid_by_coins": 0,
+    "paid_by_wallet": 0,
+    "paid_by_tinyowl_money": 0,
+    "cart": {
+      "amount": 100,
+      "number_of_items": 1,
+      "discount": 0,
+      "offers_by_restaurant": 0,
+      "offers_by_tinyowl": 0,
+      "total_discount": 0,
+      "order_id": "949e1757-6ad3-4939-b74c-7027f23cc87a",
+      "order_items": [
+        {
+          "id": "cde07966-ee49-4b8b-8b01-d9f8ab4dbed6",
+          "item_size_id": "53665a0ea29bfdf101000302",
+          "item_id": "53665a0ea29bfdf101000300",
+          "name": "Falafel Roll",
+          "base_price": 100,
+          "total_price": 100,
+          "quantity": 1,
+          "size": "None",
+          "discount": 0,
+          "offers_by_restaurant": 0,
+          "offers_by_tinyowl": 0,
+          "veg_type": "VEG",
+          "cart_id": "0d1401b3-fcd1-460d-bbed-8b0aed98cc52",
+          "order_item_choices": [
+
+          ]
+        }
+      ]
+    }
+  },
+  "place_id": "ChIJS43_8eTH5zsRP9UeFbyEptA",
+  "meta_data": {
+  "delivery_type": "dbr"
+  },
+  "app_version": "3.7.0",
+  "platform": "ANDROID",
+  "session_token": "93035L4PmQqefs2fdzhrStZo2rw3nJCxwjq7YVkIRbTVv7NqIksBzx95S71qu3Vz8E9gOISxzLDkaGn3DsTR7ER0HzgMM",
+  "device_id": "61c36231ec3301b4"
+}

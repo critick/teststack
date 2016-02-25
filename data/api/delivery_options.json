@@ -1,0 +1,14 @@
+{
+  "order": {
+    "offers_by_restaurant": 0,
+    "offers_by_tinyowl": 0,
+    "address_id": 520227,
+    "cart_amount": 100
+  },
+  "place_id": "ChIJS43_8eTH5zsRP9UeFbyEptA",
+  "restaurant_id": "5366592fa29bfdf1010002ce",
+  "app_version": "3.7.0",
+  "platform": "ANDROID",
+  "session_token": "93035L4PmQqefs2fdzhrStZo2rw3nJCxwjq7YVkIRbTVv7NqIksBzx95S71qu3Vz8E9gOISxzLDkaGn3DsTR7ER0HzgMM",
+  "device_id": "61c36231ec3301b4"
+}

@@ -1,0 +1,208 @@
+body {
+  min-width: 714px;
+  padding: 0 27px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+a {
+  color: rgb(31,148,168);
+}
+
+.logo {
+  position: relative;
+  float: left;
+  width: 270px;
+  left: -5px;
+  margin-top: -34px;
+  margin-bottom: -8px;
+}
+
+h1 {
+  margin: 0;
+}
+
+h1 a {
+  position: relative;
+  display: block;
+  /* margin: -40px 0 -60px; */
+  width: 197px;
+  height: 104px;
+  background: url(viewer-logo.png) no-repeat -30px -10px;
+  overflow: hidden;
+  text-indent: -5000%;
+}
+
+.search-bar {
+  padding-top: 9px;
+}
+
+.search-bar input {
+  position: relative;
+  z-index: 10;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: HelveticaNeue-CondensedBold, inherit;
+  color: black;
+}
+
+h2 {
+  padding-bottom: 9px;
+}
+
+input, textarea, select, .uneditable-input {
+  width: 229px;
+}
+
+.container-fluid {
+  min-width: 0;
+  padding-bottom: 18px;
+  border-top: 3px double #ddd;
+}
+
+.container-fluid:first-child {
+  position: relative;
+  z-index: 10;
+  padding-top: 63px;
+  padding-bottom: 0;
+  border-top: none;
+}
+
+.sidebar {
+  padding-top: 18px;
+  padding-right: 19px;
+  padding-bottom: 200px;
+  border-right: 1px solid #dfdfdf;
+}
+
+.container-fluid > .content {
+  margin-left: 270px;
+  padding-top: 18px;
+}
+
+.label {
+  margin-left: 4px;
+}
+
+.label.notice {
+  background: rgb(55,100,250);
+}
+
+.label.notice a {
+  color: white;
+}
+
+p {
+  max-width: 600px;
+}
+
+.step-keyword:before {
+  color: #FF5382;
+  font-size: 15px;
+}
+
+.step-keyword {
+    color: #777;
+    font-style: italic;
+    min-width: 40px;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+section.scenarios {
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 18px;
+}
+
+section.feature p:first-child {
+    white-space: pre-wrap;
+    border-left: 1px solid #999;
+    padding-left: 10px;
+    margin-left: -10px;
+}
+
+/* CHART LISTS - http://www.alistapart.com/d/accessibledata/example-barchart.html */
+.chartlist {
+  float: left;
+  border-top: 1px solid #EEE;
+  width: 80%;
+}
+.chartlist li {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #EEE;
+  _zoom: 1;
+}
+.chartlist li a {
+  display: block;
+  padding: 0.4em 4.5em 0.4em 0.5em;
+  position: relative;
+  z-index: 2;
+}
+.chartlist .count {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0 0.3em;
+  text-align: right;
+  color: #999;
+  font-weight: bold;
+  font-size: 0.875em;
+  line-height: 2em;
+}
+.chartlist .index {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #B8E4F5;
+  text-indent: -9999px;
+  overflow: hidden;
+  line-height: 2em;
+}
+
+.chartlist .notstarted a {
+  color: #C43C35;
+}
+
+.chartlist .wip a {
+  color: #F89406;
+}
+
+.chartlist .notstarted .index {
+  background: #EE736D;
+}
+
+.chartlist .wip .index {
+  background: #F8B04B;
+}
+
+.chartlist li:hover {
+  background: #EFEFEF;
+}
+
+.search-result {
+  background: #F7F77E;
+}
+
+.project-list {
+  float: right;
+  padding-top: 10px;
+  background: white;
+}
+
+/* tags */
+
+.tag-blocked, .tag-irritating {
+    background: #f00;
+    color: #fff;
+    }
+
+.tag-wip {
+    background: #66f;
+    color: #fff;
+    }
+    

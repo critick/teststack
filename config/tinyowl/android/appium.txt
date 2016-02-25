@@ -1,0 +1,6 @@
+[caps]
+platformName = "android"
+deviceName = "C6902"
+app = "~/.tmp-app-builds/tinyowl_staging_debug_2016-02-05_12-32-18.apk"
+appPackage = "com.flutterbee.tinyowl.staging"
+appActivity = "com.flutterbee.tinyowl.SplashActivity"

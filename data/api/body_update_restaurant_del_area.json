@@ -1,0 +1,14 @@
+{
+  "delivery_areas": [
+    {
+      "id": "563768eb123feab15e00018e",
+      "locality_id": 12592,
+      "min_delivery_amount": "10",
+      "delivery_time": 6000,
+      "delivery_charges": "10",
+      "to_delete": "false"
+    }
+  ],
+  "id": "5366592fa29bfdf1010002ce",
+  "session_token": "93035L4PmQqefs2fdzhrStZo2rw3nJCxwjq7YVkIRbTVv7NqIksBzx95S71qu3Vz8E9gOISxzLDkaGn3DsTR7ER0HzgMM"
+}

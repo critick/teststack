@@ -1,0 +1,148 @@
+{
+  "order": {
+    "failed_promo_codes": [],
+    "_id": "a0f80875-9983-4eb6-8ce1-adbe10646aa7",
+    "total_amount": 364,
+    "number_of_items": 3,
+    "address_id": 520050,
+    "restaurant_id": "5320976e93b144876e000010",
+    "min_delivery_amount": 10,
+    "restaurant_name": "Box8",
+    "restaurant_area": "Powai",
+    "delivery_duration": 1800,
+    "total_discount": 0,
+    "payable_amount": 364,
+    "delivery_charges": 10,
+    "packaging_charges": 0,
+    "offers_by_restaurant": 0,
+    "offers_by_tinyowl": 0,
+    "offer_ids": [],
+    "promo_codes": [],
+    "is_gift_order": false,
+    "created_at": 0,
+    "show_questions": false,
+    "order_status": "DRAFT",
+    "delivery_type": "DEFAULT",
+    "placed_from_device": false,
+    "total_offers_by_tinyowl": 0,
+    "total_offers_by_restaurant": 0,
+    "rewarded_tinyowl_money": 0,
+    "total_rewarded_tinyowl_money": 0,
+    "restaurant_logo_url": "https://dv7xwibs05aww.cloudfront.net/images/images/97853/medium_square?1445869045",
+    "phone_no": [
+      "+911231231231",
+      "+911231231231",
+      "+911231231231"
+    ],
+    "is_question_submitted": false,
+    "is_slotted_order": false,
+    "order_notifications": [],
+    "order_status_events": [],
+    "is_group_order": false,
+    "discounted_amount": 364,
+    "paid_by_card": 0,
+    "paid_by_cod": 364,
+    "paid_by_net_banking": 0,
+    "paid_by_coins": 0,
+    "paid_by_wallet": 0,
+    "paid_by_tinyowl_money": 0,
+    "cart": {
+      "amount": 354,
+      "number_of_items": 3,
+      "discount": 0,
+      "offers_by_restaurant": 0,
+      "offers_by_tinyowl": 0,
+      "total_discount": 0,
+      "order_id": "a0f80875-9983-4eb6-8ce1-adbe10646aa7",
+      "order_items": [
+        {
+          "id": "7812fbee-a4e9-405b-a7bd-94dfca06eca4",
+          "item_size_id": "55daeb7c42291016ed0004f3",
+          "item_id": "55daeb7c42291016ed0004f2",
+          "name": "Paneer Makhni Meal",
+          "base_price": 168,
+          "total_price": 168,
+          "quantity": 1,
+          "size": "None",
+          "discount": 0,
+          "offers_by_restaurant": 0,
+          "offers_by_tinyowl": 0,
+          "veg_type": "VEG",
+          "cart_id": "b5a5c875-21c7-400d-96b2-765b1373204a",
+          "order_item_choices": [
+            {
+              "choice_id": "55daeb7742291016ed0003b2",
+              "choice_name": "Choose Your Base",
+              "option_id": "55daeb7742291016ed0003b4",
+              "choice_option_name": "Rice",
+              "number": 1,
+              "price": 0,
+              "order_item_id": "7812fbee-a4e9-405b-a7bd-94dfca06eca4"
+            }
+          ]
+        },
+        {
+          "id": "a19fdc5f-a34a-453b-91a1-603b16462ee8",
+          "item_size_id": "55daeb7c42291016ed0004fb",
+          "item_id": "55daeb7c42291016ed0004fa",
+          "name": "Dal Makhni Meal",
+          "base_price": 88,
+          "total_price": 88,
+          "quantity": 1,
+          "size": "None",
+          "discount": 0,
+          "offers_by_restaurant": 0,
+          "offers_by_tinyowl": 0,
+          "veg_type": "VEG",
+          "cart_id": "b5a5c875-21c7-400d-96b2-765b1373204a",
+          "order_item_choices": [
+            {
+              "choice_id": "55daeb7742291016ed0003b2",
+              "choice_name": "Choose Your Base",
+              "option_id": "55daeb7742291016ed0003b4",
+              "choice_option_name": "Rice",
+              "number": 1,
+              "price": 0,
+              "order_item_id": "a19fdc5f-a34a-453b-91a1-603b16462ee8"
+            }
+          ]
+        },
+        {
+          "id": "90d317d9-9b30-4987-9273-447293f8cfcb",
+          "item_size_id": "55daeb7c42291016ed0004ff",
+          "item_id": "55daeb7c42291016ed0004fe",
+          "name": "Dilli Chole Meal",
+          "base_price": 98,
+          "total_price": 98,
+          "quantity": 1,
+          "size": "None",
+          "discount": 0,
+          "offers_by_restaurant": 0,
+          "offers_by_tinyowl": 0,
+          "veg_type": "VEG",
+          "cart_id": "b5a5c875-21c7-400d-96b2-765b1373204a",
+          "order_item_choices": [
+            {
+              "choice_id": "55daeb7742291016ed0003b2",
+              "choice_name": "Choose Your Base",
+              "option_id": "55daeb7742291016ed0003b4",
+              "choice_option_name": "Rice",
+              "number": 1,
+              "price": 0,
+              "order_item_id": "90d317d9-9b30-4987-9273-447293f8cfcb"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "payment": {
+    "method": "COD",
+    "sdk": "TINYOWL_DEFAULT"
+  },
+  "order_id": "568b9cb5123feaadfe000206",
+  "app_version": "3.6.9",
+  "platform": "ANDROID",
+  "session_token": "202553PYaN7EYykefAV0dvRKWyR0o9SDibosNwd8CXFTZQ6T9ikIlEfFYuYi3FAcnr2rI0OZY92qSEsqdZiL3URk79ggYY",
+  "device_id": "1de6f62a0bc129a5"
+}

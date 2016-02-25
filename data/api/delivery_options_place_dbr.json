@@ -1,0 +1,16 @@
+{
+  "order": {
+    "payable_amount": 110,
+    "paid_by_online": 0,
+    "paid_by_cod": 110,
+    "paid_by_tinyowl_money": 0
+  },
+  "payment": {
+    "method": "COD",
+    "sdk": "TINYOWL_DEFAULT"
+  },
+  "app_version": "3.7.0",
+  "platform": "ANDROID",
+  "session_token": "93035L4PmQqefs2fdzhrStZo2rw3nJCxwjq7YVkIRbTVv7NqIksBzx95S71qu3Vz8E9gOISxzLDkaGn3DsTR7ER0HzgMM",
+  "device_id": "61c36231ec3301b4"
+}

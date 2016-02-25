@@ -1,0 +1,24 @@
+{
+  "orders": [
+    {
+      "payable_amount": 1,
+      "paid_by_online": 0,
+      "paid_by_cod": 1,
+      "paid_by_tinyowl_money": 0,
+      "order_draft_id": "56a0a9f4971396f12200000a"
+    },
+    {
+      "payable_amount": 200,
+      "paid_by_online": 0,
+      "paid_by_cod": 200,
+      "paid_by_tinyowl_money": 0,
+      "order_draft_id": "56a0a9f4971396f12200000b"
+    }
+  ],
+  "payment": {
+    "method": "COD",
+    "paid_by_cod": 201,
+    "bring_change": 100,
+    "sdk": "TINYOWL_DEFAULT"
+  }
+}

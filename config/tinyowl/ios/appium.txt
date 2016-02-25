@@ -1,0 +1,10 @@
+[caps]
+platformName = "ios"
+deviceName = "iPhone 6 Plus Device"
+version = "9.0.2"
+app = "./data/app/2.0.0 TinyOwl api-f-microservice1 b4.ipa"
+nativeinstrumentslib = "true"
+udid = "694fecf543c5927127519a030fe47a501fa05730"
+waitForAppScript = "$.delay(5000); $.acceptAlert();"
+autoAcceptAlerts = "true"
+preLaunch = "true"

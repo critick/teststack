@@ -1,0 +1,51 @@
+{
+  "session_token": "93035L4PmQqefs2fdzhrStZo2rw3nJCxwjq7YVkIRbTVv7NqIksBzx95S71qu3Vz8E9gOISxzLDkaGn3DsTR7ER0HzgMM",
+  "id": "5366592fa29bfdf1010002ce",
+  "name": "DATA LEBANESE POINT OPINIO 3PL",
+  "form_id": "BLR-ELCT-0065",
+  "status": 2,
+  "restaurant_type": "3",
+  "city": "Mumbai",
+  "tinyowl_representative_restaurant_information": "DAIVIK",
+  "restaurant_account_manager": "",
+  "address": "19-B, SUN SHINE BUILDING, 1ST CROSS, LOKHANDWALA COMPLEX ANDHERI WEST",
+  "locality": "POWAI",
+  "locality_id": "11820",
+  "latitude": "19.119316",
+  "longitude": "72.911672",
+  "pin_code": "400053",
+  "contact_persons": [
+
+  ],
+  "email": "jitendra.jogeshwar@tinyowl.co.in",
+  "phone_numbers_for_sms": [
+
+  ],
+  "phone_numbers": [
+
+  ],
+  "closed_timing_ids": [
+
+  ],
+  "delivery_status": "1",
+  "is_3pl": false,
+  "packaging_charges_type": "1",
+  "packaging_charges": "0",
+  "service_tax": "0",
+  "swacch_bharat_cess": "0",
+  "service_charges": "0",
+  "service_charges_type": "1",
+  "vat_components": {
+    "vat_on_food": 0,
+    "vat_on_beverages": 0,
+    "vat_on_desserts": 0,
+    "vat_on_packaging": 0
+  },
+  "parent_localities": {
+
+  },
+
+  "vat_on_food": "0",
+  "vat_on_beverages": "0",
+  "vat_on_desserts": "0"
+}

@@ -11,7 +11,7 @@ ADB_SERIAL = ""  #device name please
 
 Cucumber::Rake::Task.new(:forumapi) do |t|
   t.cucumber_opts = " -x APP=api
-                      SERVER=https://devforumapi.upgrad.com
+                      SERVER=https://dev.upgrad.com
                       features -p forumapi "
 end
 

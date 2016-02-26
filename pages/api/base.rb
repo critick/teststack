@@ -3,17 +3,30 @@ module Pages
       class BaseAPI
         include RSpec::Matchers
 
-        @platform = ""
-        @version = ""
+           def initialize (url, params)
+               @url       =  url
+               @params    =  params
+           end
 
-          def set_platform (platform)
-            @platform = platform
+          def response_status
+              @response_status
           end
 
-          def set_version (version)
-            @version = version
+          def response_data(data)
+              @response_data[data]
           end
 
+          def get_response
+              response = make_get_request @url, @params
+              @response_status = response.code
+              @response_data = JSON.parse(response.body)
+          end
+
+          def post_response
+              response = make_post_request @url, @params
+              @response_status = response.code
+              @response_data = JSON.parse(response.body)
+          end
       end
   end
 end

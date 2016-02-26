@@ -36,10 +36,9 @@ module Pages
           @apis = {}
        end
 
-       def questions
-          @apis[:questions] ||= Pages::API::Questions.new
+       def auth
+          @apis[:auth] ||= Pages::API::Auth.new
        end
-
 
      end
   end

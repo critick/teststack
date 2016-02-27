@@ -1,10 +1,10 @@
 <%
   config_requires        = "--require config --require step_definitions/api"
   mobile_requires        = config_requires + "--require step_definitions/mobile"
-  forumapi_requires      = config_requires + "--require step_definitions/api"
-  smoke_requires         = "--require config --require step_definitions/smoke"
-  production_requires    = "--require config --require step_definitions/posweb"
-  pending_requires       = "--require config --require step_definitions/posweb"
+  forumapi_requires      = "--require config --require step_definitions/api"
+  smoke_requires         = "--require config --require step_definitions/api"
+  production_requires    = "--require config --require step_definitions/api"
+  pending_requires       = "--require config --require step_definitions/api"
 %>
 
 

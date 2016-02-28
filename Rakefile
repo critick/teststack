@@ -8,7 +8,6 @@ require 'fileutils'
 
 ADB_SERIAL = ""  #device name please
 
-
 Cucumber::Rake::Task.new(:forumapi) do |t|
   t.cucumber_opts = " -x APP=api
                       SERVER=https://dev.upgrad.com
@@ -18,7 +17,7 @@ end
 Cucumber::Rake::Task.new(:web) do |t|
   t.cucumber_opts = " DRIVER=poltergeist
                       APP=web
-                      SERVER=http://api-upgrad.com
+                      SERVER=http://upgrad.com
                       features -p web "
 end
 
@@ -26,14 +25,14 @@ Cucumber::Rake::Task.new(:android) do |t|
   t.cucumber_opts = " DRIVER=appium
                       APP=native
                       OS=android
-                      SERVER=https://api-upgrad.com
+                      SERVER=https://upgrad.com
                       features -p android "
 end
 
 
 Cucumber::Rake::Task.new(:prodlevel0) do |t|
   t.cucumber_opts = " -x APP=api
-                      SERVER=http://api-prod.upgrad.com
+                      SERVER=http://upgrad.com
                       features -p prod_level0 "
 end
 

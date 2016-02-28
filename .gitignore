@@ -3,7 +3,6 @@ doc/*
 tmp/*
 dump/*
 *.gem
-*.lock
 .bundle
 .yardoc
 reports/*.html

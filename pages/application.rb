@@ -40,6 +40,10 @@ module Pages
           @apis[:signup] ||= Pages::API::Signup.new
        end
 
+       def login
+          @apis[:login] ||= Pages::API::Login.new
+       end
+
      end
   end
 end

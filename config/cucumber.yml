@@ -2,20 +2,11 @@
   config_requires        = "--require config --require step_definitions/api"
   mobile_requires        = config_requires + "--require step_definitions/mobile"
   forumapi_requires      = "--require config --require step_definitions/api"
-  smoke_requires         = "--require config --require step_definitions/api"
   auth_api_requires      = "--require config --require step_definitions/api"
-  pending_requires       = "--require config --require step_definitions/api"
 %>
 
 
 default    : <%= config_requires %> --format pretty
 mobile     : <%= mobile_requires %> --format progress --tags @mobile
 forumapi   : <%= forumapi_requires %> --format json -o cucumber.json --format pretty --tags @forumapi
-smoke      : <%= smoke_requires %> --format html --out reports/pending_report.html --format pretty  --tags @smoke
 auth_api   : <%= auth_api_requires %> --format json -o cucumber.json --format pretty --tags @auth_api
-pending    : <%= pending_requires %> --format html --out reports/pending_report.html --format pretty --tags @pending
-
-#old: SERVER= "https://example.com"
-
-#for rerun use below options
-#$​cucumber -f pretty -f html --out report.html -f rerun --out rerun.txt​

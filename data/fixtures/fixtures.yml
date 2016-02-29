@@ -5,4 +5,6 @@ discuss:
   lastname: "user1"
   email: "user1@upgrad.com"
   phoneNumber: "999999999"
+  username: "user1@upgrad.com"
   password: "password"
+  auth_token: "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJzZXNzaW9uSURcIjpcIngxMjM0NTY3ODkwXCIsXCJ1c2VybmFtZVwiOlwidXNlcjFAdXBncmFkLmNvbVwifSJ9.idv3mfWOse4V4TK70IrRuE986wyA-kQoHq44po_t6kz7y0Go1DiGBcb617v7YhZBZtdEe2hofasnM0arohC31Q"

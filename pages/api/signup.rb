@@ -19,7 +19,6 @@ module Pages
             super(@url, @params)
         end
 
-
         def new_user_signup(firstname, lastname ,email ,phone)
             @params.merge! ({
                              "data":{

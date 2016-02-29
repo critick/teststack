@@ -7,7 +7,7 @@ module Pages
       end
 
      def login
-         @pages[:login] ||= Pages::MarketingWeb::LoginPage.new
+         @pages[:login] ||= Pages::Web::LoginPage.new
      end
 
     end
@@ -22,7 +22,7 @@ module Pages
        end
 
        def home
-         @pages[:home] ||= Pages::StudentApp::HomePage
+         @pages[:home] ||= Pages::App::HomePage
        end
 
      end

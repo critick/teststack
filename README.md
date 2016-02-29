@@ -56,45 +56,11 @@ to debug api tests
 $cucumber APP=api DEBUG=true SERVER=http://api-release.example.com features -p level0
 ```
 OR For Lazy Forks we have rake tasks
-1.to run all features for for production ci
-```bash
-$rake prodci
-```
-2.to run central tests
-```bash
-$rake central
-```
-3.to run pos android app tests
-```bash
-$rake posapp
-```
-4.to run level0 api tests
-```bash
-$rake level0
-```
 
-### Database backup and restore
-
-To take db backup to s3  from release server ,
-go to root and run
-
-```bash
-$rake db:backup[full]
 ```
-
-To restore all db from s3
+1.to run forum api tests
 ```bash
-$rake db:restore[full]
-```
-
-To restore only example.app db from s3
-```bash
-$rake db:restore
-```
-
-To restore all db from local dump
-```bash
-$rake db:restore[local]
+$rake forumapi
 ```
 
 ### Generate Test Documents online with viewer
@@ -291,13 +257,12 @@ If you see config errors, try cleaning git.
 $git clean -dfx; git reset --hard
 ```
 ## How to add Tests
-https://github.com/Flutterbee/example-web-automation/wiki/Adding-New-Tests
+
 ## Wiki
-https://github.com/Flutterbee/example-web-automation/wiki
 
 ## Repo Owner
 irfan.ahmad@upgrad.com
 
 ## Contributing
 
-https://github.com/Flutterbee/example-web-automation/blob/master/CONTRIBUTING.md
+https://bitbucket.org/irfana02/acceptance_tests/src/b11de287c59b87a965242fdabd228bc39f7cf6ef/CONTRIBUTING.md

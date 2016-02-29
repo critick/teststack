@@ -21,27 +21,13 @@ end
 
 Before do |scenario|
 if ENV['APP'].eql?"web"
-  @posweb     ||= Pages::PosWeb::Application.new
-  @posapp     ||= Pages::PosApp::Application.new
-  @central    ||= Pages::Central::Application.new
-  @webproduct ||= Pages::Webproduct::Application.new
+  @web ||= Pages::Web::Application.new
 
-  dir_to_yaml = 'data/testdata'
-  @credentials = YAML.load_file("#{dir_to_yaml}/testdata.yaml")
-  @datahead_number = @credentials['datahead_user_number']
-  @datahead_passsword = @credentials['datahead_user_password']
-
-  @marketinghead_user_number = @credentials['marketinghead_user_number']
-  @marketinghead_user_password = @credentials['marketinghead_user_password']
-
-
-  #for restaurant-creation feature :
-  @user_credentials = YAML.load_file("#{dir_to_yaml}/login_data.yaml")
-  @restaurant_data = YAML.load_file("#{dir_to_yaml}/rest_data.yaml")
+  #dir_to_yaml = 'data/testdata'
+  #@credentials = YAML.load_file("#{dir_to_yaml}/testdata.yaml")
 
 elsif ENV['APP'].eql?"native"
-  @tinyowlapp ||= Pages::TinyOwlApp::Application.new
-  @tinyowliosapp ||= Pages::TinyOwliosApp::Application.new
+  @app ||= Pages::App::Application.new
 elsif ENV['APP'].eql?"api"
   if ENV['DEBUG'].eql?"true"
     RestClient.log = 'stdout'

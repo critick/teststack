@@ -16,8 +16,8 @@ class TestData
   def self.get_base_url
     {
       :production => "",
-      :staging    => "http://api-release.tinyowl.com",
-      :test       => "http://api-f-pos.tinyowl.com",
+      :staging    => "http://api-staging.upgrad.com",
+      :test       => "http://api-test.upgrad.com",
     }[self.get_environment]
   end
 

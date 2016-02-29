@@ -1,6 +1,6 @@
 When(/^"([^"]*)"user request for signup$/) do |user_type|
-    @response  = @api.auth.post_response
-    @response_status = @api.auth.response_status
+    @response  = @api.signup.post_response
+    @response_status = @api.signup.response_status
 end
 
 Then(/^user is created with "([^"]*)" and "([^"]*)"$/) do |success,status_code|

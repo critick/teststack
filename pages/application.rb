@@ -36,8 +36,8 @@ module Pages
           @apis = {}
        end
 
-       def auth
-          @apis[:auth] ||= Pages::API::Auth.new
+       def signup
+          @apis[:signup] ||= Pages::API::Signup.new
        end
 
      end

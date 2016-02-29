@@ -2,7 +2,7 @@ include RestHelper
 
 module Pages
   module API
-      class Auth < BaseAPI
+      class Signup < BaseAPI
 
         def initialize
             @fixture  =  TestData.get_fixtures("discuss")
@@ -20,7 +20,7 @@ module Pages
         end
 
 
-        def signup(firstname, lastname ,email ,phone)
+        def new_user_signup(firstname, lastname ,email ,phone)
             @params.merge! ({
                              "data":{
                                      "firstname":   username,

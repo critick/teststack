@@ -2,8 +2,9 @@ Feature:           User actions
                    As a user
                    I want to signup to upgrad
 
-@forumapi
-Scenario Outline:  signup new user
+@auth_api @smoke_api
+
+Scenario Outline:  signup for different users
                    When  <type>user request for signup
                    Then  user is created with <success> and <status>
 

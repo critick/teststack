@@ -8,11 +8,18 @@ require 'fileutils'
 
 ADB_SERIAL = ""  #device name please
 
-Cucumber::Rake::Task.new(:forumapi) do |t|
+Cucumber::Rake::Task.new(:auth_api) do |t|
   t.cucumber_opts = " -x APP=api
                       SERVER=https://dev.upgrad.com
+                      features -p auth_api "
+end
+
+Cucumber::Rake::Task.new(:forumapi) do |t|
+  t.cucumber_opts = " -x APP=api
+                      SERVER=https://devforumapi.upgrad.com
                       features -p forumapi "
 end
+
 
 Cucumber::Rake::Task.new(:web) do |t|
   t.cucumber_opts = " DRIVER=poltergeist

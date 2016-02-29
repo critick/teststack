@@ -14,21 +14,21 @@ To run with for specific application
 $cucumber DRIVER=<driver_name> APP=<app_type> SERVER=<server_name>
 ```
 
-(Eg :to run only central tests on chrome browser over release server)
+(Eg :to run only API type tests for forum over dev server)
 
 ```bash  
-$cucumber DRIVER=chrome APP=web SERVER=https://api.example.com -p central
+$cucumber DRIVER=chrome APP=web SERVER=https://dev.upgrad.com -p forumapi
 ```
 
-DRIVER can be firefox, chrome, poltergeist(headless) ,appium [we are working on IE ]
+DRIVER can be firefox, chrome, poltergeist(headless) ,appium [working on IE ]
 APP  can be web or native for Android and iOS native apps, default is web
 SERVER can be any backend api server
 
 
 profile can be any of the below
 
-1. api        :run all api tests
-2. level0     :run all level0 api tests
+1. smoke      :run all smoke tests for all apis
+2. forumapi   :run all tests for forumapi 
 
 
 OR if you want to run a single feature only

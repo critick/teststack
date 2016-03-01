@@ -2,7 +2,14 @@
 
 ### _Build your app Anywhere, just Break them Here_
 
-This is Testing Framework based on BDD principles in Ruby,used for manual test design, automated functional testing of products across Web, Mobile and API's and maintaining their live documentation open for everyone.
+This is Testing Framework based on BDD principles in Ruby.
+
+you can use this for  
+
+* design test cases with cucumber
+* automate the tests with step definitions in ruby
+* executable-specifications and live documentation of featurres
+* execute tests suite for products Web , Mobile and API's interfaces
 
 [![Build Status](https://travis-ci.org/natritmeyer/site_prism.png)](https://travis-ci.org/Flutterbee/example-web)
 
@@ -28,7 +35,7 @@ SERVER can be any backend api server
 profile can be any of the below
 
 1. smoke      :run all smoke tests for all apis
-2. forumapi   :run all tests for forumapi 
+2. forumapi   :run all tests for forumapi
 
 
 OR if you want to run a single feature only
@@ -84,7 +91,7 @@ $rake serve_viewer
 ```bash
 $rake push_viewer
 ```
-viewer will run at  as localhost:4567/projects.example
+viewer will run at  as localhost:4567/projects/tests
 
 4.push features into database
 ```bash
@@ -107,13 +114,27 @@ $rake push_viewer 8080
 $rake drop_viewer 8080
 ```
 
-viewer will run at  as http://<server-name>/projects.example
+viewer will run at  as http://<server-name>/projects/tests
 
 ##Test cases documentation
 
 ```bash
 $cucumber -d --format html --out report.html --format pretty
 ```
+
+### Integrations Supported in Library
+
+* Test Runner           : Cucumber
+* Test Implemenataion   : Ruby
+* API Testing           : Rest-Client
+* Web Testing           : Capybara ,Selenium Webdriver [chrome,firefox,poltergeist(headless)]
+* Mobile App            : Appium (Android and iOS)
+* Mobile Web            : Appium (Android Browser ,Chrome,iOS Safari)  
+* Cloud Testing Infra   : SauceLab (will add more)
+* Feature documentation : sinatra app [viewer]
+* Code documentation    : Yard
+* Code smells           : Cuke sniffer ,Rubocop
+
 
 ##Pre-requisite and How to Setup
 
@@ -259,6 +280,7 @@ $git clean -dfx; git reset --hard
 ## How to add Tests
 
 ## Wiki
+https://bitbucket.org/irfana02/acceptance_tests/wiki/browse/
 
 ## Repo Owner
 irfan.ahmad@upgrad.com

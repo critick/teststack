@@ -175,8 +175,8 @@ $gem install bundler
 
 clone the repo and run bundle install ,all dependencies will be added
 ```bash
-$git clone git@github:Flutterbee/example-web-automation.git
-$cd example-web-automation
+$git clone git@bitbucket.org:irfana02/acceptance_tests.git
+$cd acceptance_tests
 $bundle install
 ```
 

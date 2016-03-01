@@ -19,7 +19,7 @@ module Pages
             @params.merge! ({"sessionid":  "x123456789" }) #generate and set unique string
         end
 
-        def login(username,password)
+        def set_credentials(username,password)
             @params.merge! ({
                              "username":  username ,
                              "password":  password

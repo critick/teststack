@@ -2,16 +2,15 @@
 
 ### _Build your app Anywhere, just Break them Here_
 
-This is Testing Framework based on BDD principles in Ruby.
+[![Build Status](https://travis-ci.org/natritmeyer/site_prism.png)](https://travis-ci.org/Flutterbee/example-web)
 
-you can use this for  
+This is Testing Framework based on BDD principles in Ruby ,you can use this for  
 
 * design test cases with cucumber
 * automate the tests with step definitions in ruby
 * executable-specifications and live documentation of featurres
 * execute tests suite for products Web , Mobile and API's interfaces
 
-[![Build Status](https://travis-ci.org/natritmeyer/site_prism.png)](https://travis-ci.org/Flutterbee/example-web)
 
 ### How to Run Tests
 

@@ -45,6 +45,10 @@ class TestData
     Faker::Internet.email
   end
 
+  def self.get_session_id
+      Faker::Bitcoin.address
+  end
+
   def self.get_user_values(overwrites = {})
     {
       :name    => self.get_full_name,

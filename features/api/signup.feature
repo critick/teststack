@@ -1,8 +1,8 @@
-Feature:           User actions
+Feature:           User signup
                    As a user
                    I want to signup to upgrad
 
-@auth_api @smoke_api
+@central @smoke_api
 
 Scenario Outline:  signup for different users
                    When  <type>user request for signup

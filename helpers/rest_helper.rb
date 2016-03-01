@@ -12,7 +12,6 @@ module RestHelper
 
   		def make_get_request(url, get_data)
 					begin
-						binding.pry
 	  				RestClient.get  ENV['SERVER']+url,{:params=>get_data}
 				  rescue => e
 						e.response

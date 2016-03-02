@@ -92,7 +92,7 @@ $rake push_viewer
 ```
 viewer will run at  as localhost:4567/projects/tests
 
-4.push features into database
+4.push features into databasex
 ```bash
 $rake drop_viewer
 ```
@@ -241,18 +241,19 @@ $node .
 ```
 
 ## Library documentation
-1.Appium
-http://www.rubydoc.info/github/appium/ruby_lib/Appium/
-2.Capybara
+* Appium
+http://www.rubydoc.info/github/appium/ruby_lib/Appium/  
+* Capybara
 http://www.rubydoc.info/github/jnicklas/capybara/master
-3.SitePrism
+* SitePrism
 http://www.rubydoc.info/gems/site_prism/frames
-4.Poltergeist
+* Poltergeist
 https://github.com/teampoltergeist/poltergeist
-5.Cucumber
+* Cucumber
 http://www.rubydoc.info/github/cucumber/cucumber-ruby/
 https://github.com/cucumber/cucumber/wiki
-
+* Rest-Client
+http://www.rubydoc.info/github/rest-client/rest-client/master
 
 ## Troubleshooting
 
@@ -276,14 +277,11 @@ If you see config errors, try cleaning git.
 ```bash
 $git clean -dfx; git reset --hard
 ```
-## How to add Tests
-
 ## Wiki
-https://bitbucket.org/irfana02/acceptance_tests/wiki/browse/
+https://bitbucket.org/upgrad_team/acceptance_test/wiki/browse/
 
 ## Repo Owner
 irfan.ahmad@upgrad.com
 
 ## Contributing
-
-https://bitbucket.org/irfana02/acceptance_tests/src/b11de287c59b87a965242fdabd228bc39f7cf6ef/CONTRIBUTING.md
+https://bitbucket.org/upgrad_team/acceptance_test/src/9175caddd863761424232b644dc79fc23ee742bb/CONTRIBUTING.md

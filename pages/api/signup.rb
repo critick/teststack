@@ -16,7 +16,7 @@ module Pages
                                   "password":    @fixture["password"]
                                  }
                            }
-            super(@url, @params)
+            super(:url => @url, :params=> @params)
         end
 
         def new_user_signup(firstname, lastname ,email ,phone)

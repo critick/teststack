@@ -1,11 +1,10 @@
 discuss:
-  csrftoken: "winlbYr1WsvqDWGrW5ZZpfgZmZuNzF1d"
-  sessionid: "5oy49tymq5klqs2tdy9vlb0w345vqp4e"
-  firstname: "test"
-  lastname: "user1"
-  email: "user1@upgrad.com"
+  csrftoken:   "winlbYr1WsvqDWGrW5ZZpfgZmZuNzF1d"
+  firstname:   "test"
+  lastname:    "user1"
+  email:       "user1@upgrad.com"
   phoneNumber: "999999999"
-  username: "user1@upgrad.com"
-  password: "password"
-  auth_token: "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJzZXNzaW9uSURcIjpcIngxMjM0NTY3ODkwXCIsXCJ1c2VybmFtZVwiOlwidXNlcjFAdXBncmFkLmNvbVwifSJ9.idv3mfWOse4V4TK70IrRuE986wyA-kQoHq44po_t6kz7y0Go1DiGBcb617v7YhZBZtdEe2hofasnM0arohC31Q"
-  sessionid: "x123456789"
+  username:    "user1@upgrad.com"
+  password:    "password"
+  auth_token:  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJzZXNzaW9uSURcIjpcIngxMjM0NTY3ODkyXCIsXCJ1c2VybmFtZVwiOlwidXNlcjFAdXBncmFkLmNvbVwifSJ9.PhjjvZubALbgYLAAOnccOg4sAyn1hAlbxaOPVXSBRZ4V6GQg720-mFaUy97ADzRO1J-9JNWv9YJPnNbb2mAAEg
+  sessionid:   x1234567892

@@ -29,6 +29,8 @@ World(Test::Unit::Assertions)
 require 'show_me_the_cookies'
 World(ShowMeTheCookies)
 
+require 'wannabe_bool'
+
 # Cucumber with FactoryGirl
 require 'factory_girl'
 World(FactoryGirl::Syntax::Methods)
@@ -38,19 +40,11 @@ require 'logger'
 $LOG = Logger.new($stderr)
 #Example : $LOG.debug(message)
 
-#For Rack based API Testing
+#For Rack based APITesting
 require 'rack'
 require 'rack/test'
 World(Rack::Test::Methods)
 
-#For SSHConnections
-require 'sshkit'
-require 'sshkit/dsl'
-#require 'remote'
-
-#For postgres connections
-#require 'pg'
-#require 'database_helper'
 
 #For parallel execution
 require 'parallel_tests'
@@ -71,6 +65,7 @@ require 'pry'
 $LOAD_PATH << './pages'
 $LOAD_PATH << './lib'
 $LOAD_PATH << './data/fixtures'
+$LOAD_PATH << './helpers'
 
 #For the Page Objects configuration ,load all pages
 require 'site_prism'
@@ -78,11 +73,19 @@ require_all 'pages'
 
 require 'test_data'
 
-#for Adding Library files during execution
-require 'pos_settings'
+
 
 ##For the common handling api's ,load all helpers
-#require_all 'helpers'
+require_all 'helpers'
+#for Adding Library files during execution
+require 'rest_helper'
+#For SSHConnectionsrequire 'sshkit'
+require 'sshkit/dsl'
+require 'remote'
+
+#For postgres connections
+require 'pg'
+require 'database_helper'
 
 
 case ENV['APP']
@@ -91,14 +94,14 @@ case ENV['APP']
 
         case ENV['OS']
           when "android"
-            capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config/example/android", 'appium.txt')
+                capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config/example/android", 'appium.txt')
           when "ios"
-            capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config/example/ios", 'appium.txt')
+                capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config/example/ios", 'appium.txt')
           else
-          capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config", 'appium.txt')
+                capabilities = Appium.load_appium_txt file: File.join(Dir.pwd+"/config", 'appium.txt')
         end
-        Appium::Driver.new(capabilities)
 
+        Appium::Driver.new(capabilities)
         Before  { $driver.start_driver }
 
          #Appium.promote_singleton_appium_methods Pages::App

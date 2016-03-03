@@ -3,10 +3,13 @@ module Pages
       class BaseAPI
         include RSpec::Matchers
 
-           def initialize (url, params)
-               @url       =  url
-               @params    =  params
-           end
+          attr_accessor  :url, :params, :headers
+
+          def initialize(args = {})
+              @url     = args.fetch(:url ,'/')
+              @params  = args.fetch(:params,'{}')
+              @headers = args.fetch(:headers,'{}')
+          end
 
           def response_status
               @response_status
@@ -21,7 +24,7 @@ module Pages
           end
 
           def get_response
-              response = make_get_request @url, @params
+              response = make_get_request @url, @params, @headers
               @response_status  = response.code
               @response_data = JSON.parse(response.body)
               @response_headers = response.headers

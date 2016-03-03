@@ -13,10 +13,10 @@ module Remote
 
    #SSHKit.config.output_verbosity = :debug
 
-  def self.get_otp(number)
+  def self.get_token_from_number(number)
       on 'ubuntu@api-upgrad.com' do
         as :ubuntu do
-            @@message = DataBaseHelper.get_query("SELECT post_token from sms_logins where contact_number='#{number.to_i}' order by last_sms_sent_at desc limit 1","post_token")
+            @@message = DataBaseHelper.get_query("SELECT token from table where number='#{number.to_i}' limit 1","post_token")
         end
       end
     return @@message

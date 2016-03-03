@@ -4,9 +4,9 @@ class DataBaseHelper
 
   def self.connect
     @conn = PG.connect(
-        :host => '172.31.80.138',
-        :dbname => 'iam-service',
-        :user => 'geo_rails')
+        :host => 'localhost',
+        :dbname => 'root',
+        :user => 'root')
   end
 
   def self.disconnect

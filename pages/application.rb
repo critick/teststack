@@ -44,6 +44,10 @@ module Pages
           @apis[:login] ||= Pages::API::Login.new
        end
 
+       def questions
+          @apis[:questions] ||= Pages::API::Questions.new
+       end
+
      end
   end
 end

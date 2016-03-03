@@ -12,6 +12,7 @@ Then(/^login responds with "([^"]*)" ,"([^"]*)" ,"([^"]*)" and list of keys$/) d
      expect(@login_response_status).to eql(status_code.to_i)
      expect((@api.login.response_data("success").to_s)).to eql(success)
      if success == "true"
+        binding.pry
         table.map_headers! {|header| header.downcase.to_sym }
         table.hashes.each do |row|
               expect(@api.login.response_data("data")[row[:user_details]]).not_to be_empty

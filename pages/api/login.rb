@@ -1,5 +1,4 @@
 include RestHelper
-require 'wannabe_bool'
 
 module Pages
   module API
@@ -13,7 +12,7 @@ module Pages
                           "password":  @fixture["password"],
                           "sessionid": @fixture["sessionid"]
                          }
-            super(@url, @params)
+            super(:url => @url, :params=> @params)
         end
 
         def set_session()

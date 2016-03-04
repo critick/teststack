@@ -84,8 +84,8 @@ require 'sshkit/dsl'
 require 'remote'
 
 #For postgres connections
-require 'pg'
-require 'database_helper'
+#require 'pg'
+#require 'database_helper'
 
 
 case ENV['APP']

@@ -145,7 +145,6 @@ GEM
       parallel
     parser (2.3.0.6)
       ast (~> 2.2)
-    pg (0.18.4)
     phantomjs (2.1.1.0)
     plucky (0.6.6)
       mongo (~> 1.5)
@@ -303,7 +302,6 @@ DEPENDENCIES
   page-object
   parallel
   parallel_tests
-  pg
   phantomjs
   poltergeist
   pretty_face

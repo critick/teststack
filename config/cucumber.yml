@@ -6,7 +6,7 @@
 %>
 
 
-default    : <%= config_requires %> --format pretty
+default    : <%= config_requires %> --format json -o cucumber.json --format pretty
 mobile     : <%= mobile_requires %> --format progress --tags @mobile
 forumapi   : <%= forumapi_requires %> --format json -o cucumber.json --format pretty --tags @forumapi
 auth_api   : <%= auth_api_requires %> --format json -o cucumber.json --format html --out report.html --format pretty --tags @auth_api

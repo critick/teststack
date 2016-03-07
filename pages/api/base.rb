@@ -7,8 +7,8 @@ module Pages
 
           def initialize(args = {})
               @url     = args.fetch(:url ,'/')
-              @params  = args.fetch(:params,'{}')
-              @headers = args.fetch(:headers,'{}')
+              @params  = args.fetch(:params,{})
+              @headers = args.fetch(:headers,{})
           end
 
           def response_status

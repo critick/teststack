@@ -1,6 +1,6 @@
 # Acceptance Test
 
-### _Build your app Anywhere, just Break them Here_
+### _Build your app Anywhere, just Test them Here_
 
 [![Build Status](https://travis-ci.org/natritmeyer/site_prism.png)](https://travis-ci.org/Flutterbee/example-web)
 
@@ -63,7 +63,7 @@ $cucumber APP=api DEBUG=true SERVER=http://api-release.example.com features -p l
 ```
 OR For Lazy Forks we have rake tasks
 
-```
+
 1.to run forum api tests
 ```bash
 $rake forumapi
@@ -137,7 +137,23 @@ $cucumber -d --format html --out report.html --format pretty
 
 ##Pre-requisite and How to Setup
 
-1.Install Ruby on mac /ubuntu
+1.prepare system with package manager
+
+install homebrew on mac , MacPort installation is not recommended
+OR apt-get package manager on Ubuntu
+
+Install gpg on system ,for mac
+
+```bash
+$brew install gpg
+```
+OR on Ubuntu
+
+```bash
+$sudo apt-get install gpg
+```
+
+2.Install Ruby on mac /ubuntu
 
 Install the latest stable release of Ruby.
 ```bash
@@ -148,7 +164,7 @@ $rvm install ruby
 Make sure rvm is using the correct ruby by default
 ```bash
 $rvm list
-$rvm --default use 2.2.0
+$rvm --default use 2.2.1
 ```
 
 If you have an old ruby/rvm, you can upgrade with
@@ -175,13 +191,13 @@ $gem install bundler
 
 clone the repo and run bundle install ,all dependencies will be added
 ```bash
-$git clone git@bitbucket.org:irfana02/acceptance_tests.git
+$git clone git@bitbucket.org:upgrad_team/acceptance_test.git
 $cd acceptance_tests
 $bundle install
 ```
 
 2.For Poltergeist,
-On Mac : Use HomeBrew ,MacPort installation is not recommended
+On Mac
 
 ```bash
 $brew install phantomjs

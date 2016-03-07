@@ -1,4 +1,5 @@
 Given(/^"([^"]*)" user request for questions$/) do |user_type|
+    #@api.questions.set_params(:owner => "me")
     @api.questions.get_response
 end
 

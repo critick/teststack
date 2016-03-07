@@ -1,4 +1,4 @@
-Feature:           User login
+Feature:           Forum Questions
                    As a upgrad user
                    I want to use questions on upgrad forums
 

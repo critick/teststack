@@ -17,12 +17,9 @@ module Pages
         end
 
       def set_params(args={})
-          @owner        = args.fetch(:owner)
-          @bookmarked   = args.fetch(:bookmarked)
-          @page         = args.fetch(:page)
-          @order_by     = args.fetch(:order_by)
-          @pageSize     = args.fetch(:pageSize)
-          @context      = args.fetch(:context) #context json
+          @body        = args.fetch(:body)        if args.has_key?(:body)
+          @questionId  = args.fetch(:questionId)  if args.has_key?(:questionId)
+
           @params.merge! (args)
       end
 

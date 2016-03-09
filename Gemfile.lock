@@ -1,19 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    actionpack (4.2.5.1)
-      actionview (= 4.2.5.1)
-      activesupport (= 4.2.5.1)
-      rack (~> 1.6)
-      rack-test (~> 0.6.2)
-      rails-dom-testing (~> 1.0, >= 1.0.5)
-      rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (4.2.5.1)
-      activesupport (= 4.2.5.1)
-      builder (~> 3.1)
-      erubis (~> 2.7.0)
-      rails-dom-testing (~> 1.0, >= 1.0.5)
-      rails-html-sanitizer (~> 1.0, >= 1.0.2)
     activemodel (4.2.5.1)
       activesupport (= 4.2.5.1)
       builder (~> 3.1)
@@ -86,7 +73,6 @@ GEM
     diff-lcs (1.2.5)
     domain_name (0.5.20160216)
       unf (>= 0.0.5, < 1.0.0)
-    erubis (2.7.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     fakefs (0.8.0)
@@ -112,8 +98,6 @@ GEM
     komainu (0.0.10)
     launchy (2.4.3)
       addressable (~> 2.3)
-    loofah (2.0.3)
-      nokogiri (>= 1.5.9)
     method_source (0.8.2)
     mime-types (2.99.1)
     mini_portile2 (2.0.0)
@@ -155,10 +139,6 @@ GEM
       websocket-driver (>= 0.2.0)
     power_assert (0.2.7)
     powerpack (0.1.1)
-    pretty_face (0.10.3)
-      actionpack (>= 3.2.13)
-      cucumber
-      syntax
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -173,14 +153,6 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails-deprecated_sanitizer (1.0.3)
-      activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.7)
-      activesupport (>= 4.2.0.beta, < 5.0)
-      nokogiri (~> 1.6.0)
-      rails-deprecated_sanitizer (>= 1.0.1)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
     rainbow (2.1.0)
     rake (10.5.0)
     rdiscount (2.1.8)
@@ -241,7 +213,6 @@ GEM
     sshkit (1.8.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    syntax (1.2.0)
     test-unit (3.1.7)
       power_assert
     thread_safe (0.3.5)
@@ -304,7 +275,6 @@ DEPENDENCIES
   parallel_tests
   phantomjs
   poltergeist
-  pretty_face
   pry-byebug
   pry-rails
   rack-test

@@ -48,6 +48,10 @@ module Pages
           @apis[:questions] ||= Pages::API::Questions.new
        end
 
+       def answers
+          @apis[:answers] ||= Pages::API::Answers.new
+       end
+
      end
   end
 end

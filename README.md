@@ -53,9 +53,9 @@ if you want to run all features with console output of test results
 $cucumber DRIVER=<driver_name> SERVER=<server_name> --format pretty
 ```
 
-for level0 api tests
+for smoke api tests
 ```bash
-$cucumber APP=api SERVER=http://api-release.example.com features -p level0
+$cucumber APP=api SERVER=http://api-release.example.com features -p smoke
 ```
 to debug api tests
 ```bash

@@ -8,3 +8,5 @@ discuss:
   password:    "password"
   auth_token:  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJzZXNzaW9uSURcIjpcIngxMjM0NTY3ODkyXCIsXCJ1c2VybmFtZVwiOlwidXNlcjFAdXBncmFkLmNvbVwifSJ9.PhjjvZubALbgYLAAOnccOg4sAyn1hAlbxaOPVXSBRZ4V6GQg720-mFaUy97ADzRO1J-9JNWv9YJPnNbb2mAAEg
   sessionid:   x1234567892
+  answer:      "this is default answer"
+  questionId:  1

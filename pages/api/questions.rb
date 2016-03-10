@@ -9,8 +9,8 @@ module Pages
             @url      =  "/v1/questions"
             @params   =  {}
             @headers  =  {
-                          "Auth-Token":  @fixture["auth_token"],
-                          "sessionid":   @fixture["sessionid"]
+                          "Auth-Token":   @fixture["auth_token"],
+                          "sessionid":    @fixture["sessionid"]
                           }
 
             super(:url    => @url,

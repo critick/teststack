@@ -33,7 +33,7 @@ module Pages
           def post_response
               response = make_post_request @url, @params, @headers
               @response_status = response.code
-              @response_data = JSON.parse(response.body)
+              @response_data = JSON.parse(response.body, quirks_mode: true)
               @response_headers = response.headers
           end
       end

@@ -56,6 +56,18 @@ module Pages
           @apis[:comments] ||= Pages::API::Comments.new
        end
 
+       def voteanswer
+          @apis[:voteanswer] ||= Pages::API::VoteAnswer.new
+       end
+
+       def votequestion
+          @apis[:votequestion] ||= Pages::API::VoteQuestion.new
+       end
+
+       def bookmark
+          @apis[:bookmark] ||= Pages::API::Bookmark.new
+       end
+
      end
   end
 end

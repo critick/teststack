@@ -52,6 +52,10 @@ module Pages
           @apis[:answers] ||= Pages::API::Answers.new
        end
 
+       def comments
+          @apis[:comments] ||= Pages::API::Comments.new
+       end
+
      end
   end
 end

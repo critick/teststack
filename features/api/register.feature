@@ -2,7 +2,7 @@ Feature:           User signup
                    As a user
                    I want to register to upgrad
 
-Scenario Outline:  register for different users
+Scenario Outline:  register for different user
                    When  <type>user request for register
                    Then  user is registered with <success> and <status>
 

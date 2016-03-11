@@ -4,9 +4,10 @@ Feature:           Forum Bookmark Question
 
 @forumapi
 Scenario Outline:  perform bookmark on a question
-                   When  <type> user request for bookmark
+                   When  <type> user request for <operation> bookmark
                    Then  bookmark responds with <statusCode>
 
 Examples:          validate on types of request data
-                   | type          | statusCode  |
-                   | "existing"    | "201"       |
+                  | type          | operation | statusCode  |
+                  | "existing"    | "add"     | "201"       |
+                  | "existing"    | "delete"  | "204"       |

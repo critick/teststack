@@ -1,12 +1,13 @@
-Feature:           Forum Vote
+Feature:           Forum Vote Answer
                    As a upgrad user
                    I want to vote answers on upgrad forums
 
-@forumapi @vote
+@forumapi @voteanswer
 Scenario Outline:  perform upvote on a answer
-                   When  <type> user request for voteanswer
+                   When  <type> user request for <operation> voteanswer
                    Then  voteanswer responds with <statusCode>
 
 Examples:          validate on types of request data
-                   | type          | statusCode  |
-                   | "existing"    | "200"       |
+                   | type          | operation | statusCode  |
+                   | "existing"    | "add"     | "201"       |
+                   | "existing"    | "delete"  | "204"       |

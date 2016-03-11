@@ -12,7 +12,14 @@ module Pages
                           "password":  @fixture["password"],
                           "sessionid": @fixture["sessionid"]
                          }
-            super(:url => @url, :params=> @params)
+            @headers  =  {
+                          "content_type": @fixture["content_type"]
+                         }
+
+            super(url:     @url,
+                  params:  @params,
+                  headers: @headers)
+
         end
 
         def set_session()

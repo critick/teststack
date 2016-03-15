@@ -1,4 +1,4 @@
-Feature:           User signup
+Feature:           User Register
                    As a user
                    I want to register to upgrad
 

@@ -1,5 +1,4 @@
 When(/^"([^"]*)" user request for "([^"]*)" voteanswer$/) do |user_type,vote_type|
-      binding.pry
       case vote_type
       when "add"
            @api.voteanswer.post_response

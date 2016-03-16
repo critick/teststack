@@ -2,7 +2,7 @@ Feature:           Forum Answers
                    As a upgrad user
                    I want to view/add/update/delete answers on upgrad forums
 
-@forumapi
+@forumapi @smoke
 Scenario Outline:  post answers to a question
                    When  <type> user request for answers
                    Then  answers responds with <statusCode>

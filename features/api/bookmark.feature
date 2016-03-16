@@ -2,7 +2,7 @@ Feature:           Forum Bookmark Question
                    As a upgrad user
                    I want to bookmark questions on upgrad forums
 
-@forumapi
+@forumapi @smoke
 Scenario Outline:  perform bookmark on a question
                    When  <type> user request for <operation> bookmark
                    Then  bookmark responds with <statusCode>

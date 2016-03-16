@@ -11,7 +11,7 @@ Examples:          validate on types of request data
                    | type          | status_code |
                    | "existing"    | "200"       |
 
-@regression
+@regression 
 Scenario Outline: get questions with different params
                   Given params are <context>, <owner>, <bookmarked>, <page>, <order_by> and <pageSize>
                   When  <type> user request for questions

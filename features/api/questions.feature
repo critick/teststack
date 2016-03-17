@@ -11,7 +11,7 @@ Examples:          validate on types of request data
                    | type          | status_code |
                    | "existing"    | "200"       |
 
-@regression 
+@regression
 Scenario Outline: get questions with different params
                   Given params are <context>, <owner>, <bookmarked>, <page>, <order_by> and <pageSize>
                   When  <type> user request for questions
@@ -27,7 +27,7 @@ Examples:          validate on types of request data
                   | "existing"| ""      | "me"  | NA          | 1     | NA       | NA       |  200        |
                   | "existing"| ""      | "me"  | NA          | 99999 | NA       | NA       |  400        |
 
-
+@question
 Scenario Outline: create one question
                   Given  <type> user request for creating questions
                   Then  questions responds with <status_code>

@@ -28,8 +28,8 @@ module Pages
         end
 
         def post_params(args={})
-            @title   = args.fetch(:title) if args.has_key(:title)
-            @owner   = args.fetch(:owner) if args.has_key(:owner)
+            @title   = args.fetch(:title) if args.has_key?(:title)
+            @owner   = args.fetch(:owner) if args.has_key?(:owner)
             @params.merge! (args)
         end
 

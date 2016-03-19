@@ -1,25 +1,22 @@
-Given(/^I am logged in  as "([^"]*)"$/) do |user|
-       dir_to_yaml = 'data/testdata'
-       @credentials = YAML.load_file("#{dir_to_yaml}/testdata.yaml")
-
-       #check if not already logged in ,else goto home
-       @web.login.load
-       sleep(2)
-       if current_url.eql?((ENV['SERVER'])+"/")
-          sleep(5) #wait for all network calls to finish
-          @web.login.log_in(@number,@password)
-       end
-
-       @web.home.load
-       expect(@web.home).to be_displayed
+Given(/^I am on home page$/) do
+     @web.home.load
 end
+
+When(/^I login in with "([^"]*)" and "([^"]*)"$/) do |email, password|
+     @web.home.set_credentials(email,password)
+     @web.home.log_in
+end
+
+When(/^I login to upgrad$/) do
+     @web.home.log_in
+end
+
 
 Then(/^I should see "(.*?)"$/) do |status|
     case status
     when "home"
          expect(@web.home).to be_displayed
-    else
-         expect(@web.login).to have_text(status)
+         #expect(@web.login).to have_text(status)
     end
 
     # add this to helper ,should be called only in case of Poltergeist

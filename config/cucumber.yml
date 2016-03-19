@@ -1,12 +1,12 @@
 <%
   config_requires        = "--require config --require step_definitions/api"
-  mobile_requires        = config_requires + "--require step_definitions/mobile"
+  web_requires           = "--require config --require step_definitions/web"
   forumapi_requires      = "--require config --require step_definitions/api"
   auth_api_requires      = "--require config --require step_definitions/api"
 %>
 
 
 default    : <%= config_requires %> --format json -o cucumber.json --format pretty
-mobile     : <%= mobile_requires %> --format progress --tags @mobile
+web        : <%= web_requires %> --format json -o cucumber.json --format pretty --format html --out report.html  --tags @web
 forumapi   : <%= forumapi_requires %> --format json -o cucumber.json --format pretty --format html --out report.html --tags @forumapi
 auth_api   : <%= auth_api_requires %> --format json -o cucumber.json --format html --out report.html --format pretty --tags @auth_api

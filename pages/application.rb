@@ -6,8 +6,8 @@ module Pages
          @pages = {}
       end
 
-     def login
-         @pages[:login] ||= Pages::Web::LoginPage.new
+     def home
+         @pages[:home] ||= Pages::Web::HomePage.new
      end
 
     end

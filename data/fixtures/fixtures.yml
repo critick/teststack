@@ -13,3 +13,8 @@ discuss:
   content_type: "application/json"
   comment:      "this is a testing comment"
   answerId:     "5056"
+
+web:
+  email:         "irfan.ahmad@upgrad.com"
+  password:      "password"
+  

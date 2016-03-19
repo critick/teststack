@@ -16,7 +16,7 @@ end
 Then(/^the response is a list containing (d+) (.*?)s?$/) do |count, type|
   data = MultiJson.load(last_response.body)
   validate_list(data, of: type, count: count)
-end 
+end
 
 Then(/(d+) (?:.*?) ha(?:s|ve) the keys:$/) do |count, table|
   expected_item = table.hashes.each_with_object({}) do |row, hash|

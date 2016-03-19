@@ -22,7 +22,7 @@ end
 
 
 Cucumber::Rake::Task.new(:web) do |t|
-  t.cucumber_opts = " DRIVER=chrome
+  t.cucumber_opts = " DRIVER=poltergeist
                       APP=web
                       SERVER=http://demo.upgrad.com
                       features -p web "
@@ -99,7 +99,6 @@ task :drop_viewer, :port do |t,args|
   RestClient.delete "#{URL}?authentication_code=#{File.read(".viewer").strip}"
   puts "completed dropping feaures from database"
 end
-
 
 YARD::Rake::YardocTask.new(:yard) do |t|
 t.files   = ['features/**/*.feature', 'features/**/*.rb']

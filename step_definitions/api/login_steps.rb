@@ -14,7 +14,7 @@ Then(/^login responds with "([^"]*)" ,"([^"]*)" ,"([^"]*)" and list of keys$/) d
      if success == "true"
         table.map_headers! {|header| header.downcase.to_sym }
         table.hashes.each do |row|
-              expect(@api.login.response_data("data")[row[:user_details]]).not_to be_empty
+              expect(@api.login.response_data("data")[row[:userdetails]]).not_to be_empty
         end
      end
 end

@@ -2,20 +2,17 @@ include RestHelper
 
 module Pages
   module API
-      class Answers < BaseAPI
+      class Bookmark < BaseAPI
 
         def initialize
             @fixture  =  TestData.get_fixtures("discuss")
-            @url      =  "/v1/answers/"
+            @url      =  "/v1/questions/"+ @fixture["questionId"] +"/bookmark/"
             @headers  =  {
                            "Auth-Token":   @fixture["auth_token"],
                            "sessionid":    @fixture["sessionid"],
                            "content_type": @fixture["content_type"]
                          }
-            @params   =  {
-                           "body":       @fixture["answer"],
-                           "questionId": @fixture["questionId"]
-                         }
+            @params   =  {}
 
             super(url:     @url,
                   headers: @headers,
@@ -23,12 +20,6 @@ module Pages
 
         end
 
-      def post_params(args={})
-          @body        = args.fetch(:body)        if args.has_key?(:body)
-          @questionId  = args.fetch(:questionId)  if args.has_key?(:questionId)
-
-          @params.merge! (args)
-      end
 
      end
   end

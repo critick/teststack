@@ -1,12 +1,12 @@
 pkg/*
 doc/*
 tmp/*
+reports/*
 dump/*
 *.gem
 .bundle
 .yardoc
-report*.html
-reports/*.html
+report.html
 appium_logs.txt
 *.tar.gz
 *.sql

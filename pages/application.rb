@@ -6,8 +6,8 @@ module Pages
          @pages = {}
       end
 
-     def login
-         @pages[:login] ||= Pages::Web::LoginPage.new
+     def home
+         @pages[:home] ||= Pages::Web::HomePage.new
      end
 
     end
@@ -46,6 +46,26 @@ module Pages
 
        def questions
           @apis[:questions] ||= Pages::API::Questions.new
+       end
+
+       def answers
+          @apis[:answers] ||= Pages::API::Answers.new
+       end
+
+       def comments
+          @apis[:comments] ||= Pages::API::Comments.new
+       end
+
+       def voteanswer
+          @apis[:voteanswer] ||= Pages::API::VoteAnswer.new
+       end
+
+       def votequestion
+          @apis[:votequestion] ||= Pages::API::VoteQuestion.new
+       end
+
+       def bookmark
+          @apis[:bookmark] ||= Pages::API::Bookmark.new
        end
 
      end

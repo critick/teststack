@@ -48,7 +48,6 @@ World(Rack::Test::Methods)
 
 #For parallel execution
 require 'parallel_tests'
-
 #For Capybara and setting the default browser
 require "capybara/cucumber"
 

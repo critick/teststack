@@ -3,10 +3,10 @@
 #Eg: 1.capture network traffic
 #    2.errors capture
 #    3.async handling
-#    4.
+#    4.performance stats
 
 class PoltergeistWrapper
-  
+
   Capybara.register_driver :poltergeist do |app|
 
       options = { :js_errors => false,
@@ -22,7 +22,7 @@ class PoltergeistWrapper
 
      Capybara::Poltergeist::Driver.new(app, options)
   end
-  
+
   def log_network_calls()
        page.driver.network_traffic.each do |request|
          request.response_parts.uniq(&:url).each do |response|
@@ -30,6 +30,5 @@ class PoltergeistWrapper
          end
       end
   end
-  
+
 end
-   

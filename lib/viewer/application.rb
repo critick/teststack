@@ -132,8 +132,8 @@ get '/projects/:project/features/:feature/?' do
   haml :feature
 end
 
-get '/projects/:project/progress/?' do
-  haml :progress
+get '/projects/:project/dashboard/?' do
+  haml :dashboard
 end
 
 get '/projects/:project/search/?' do

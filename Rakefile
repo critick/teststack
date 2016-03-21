@@ -105,7 +105,7 @@ task :cleanup do
   FileUtils.rm_rf('reports')
   File.delete('cucumber_failures.log') if File.exist?('cucumber_failures.log')
   File.new('cucumber_failures.log', 'w')
-  Dir.mkdir('reports')
+    Dir.mkdir('reports')
 end
 
 task :parallel_run do
@@ -137,13 +137,19 @@ task :rubocop do
   sh 'bundle exec rubocop features/'
 end
 
+task checkup: [:cleanup, :cuke_sniffer]
+
 
 task :docker do
-  puts '========Preparing docker environment to run cucumber tests inside docker containers======='
+  puts 'Preparing docker environment to run cucumber tests inside docker containers======='
   sh 'sh docker.sh'
 end
 
-task checkup: [:cleanup, :cuke_sniffer]
+task :load do
+  puts 'stating load test'
+  sh './load/gatling_local.sh'
+end
+
 
 
 YARD::Rake::YardocTask.new(:yard) do |t|

@@ -59,7 +59,7 @@ function delete_old_reports_screenshots {
 function run_cucumber_tests {
   # docker exec ${CONTAINER_NAME}  bundle exec rubocop features
   echo "\n Running Bundler"
-  docker exec ${CONTAINER_NAME} bundle install --path vendor/
+  docker exec ${CONTAINER_NAME} bundle install
   echo "Now running cucumber tests"
   docker exec ${CONTAINER_NAME} bundle exec rake poltergeist
   exit $?

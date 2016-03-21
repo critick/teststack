@@ -15,3 +15,7 @@ appium_logs.txt
 *.bson
 cucumber.json
 logs/appium_logs.txt
+*.log
+*.zip
+load/gatling-charts-highcharts-bundle-2.1.7
+vendor/*

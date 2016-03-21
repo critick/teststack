@@ -121,6 +121,25 @@ viewer will run at  as http://<server-name>/projects/tests
 $cucumber -d --format html --out report.html --format pretty
 ```
 
+### Docker
+We can run our cucumber scenario inside Docker containers. Assuming you have Docker installed.
+
+```bash
+$bundle exec rake docker
+```
+
+This will build Docker image 'testing-ci' and run cucumber scenarios inside container 'testing-ci'.
+
+
+### Performance Testing - Gatling
+You can use Gatling setup to execute load tests against your endpoints. Simply change 'load/user-files/simulation/SampleLoadTEST.scala' file and puts your URL to Test as base URL.
+
+          $ cd load
+          $ sh gatling_local.sh
+This will run load tests against your url. You are free to record new simulations. Once finished there will be link to HTML report at the end.
+
+There is CI integration to plug it with jenkins.
+
 ### Integrations Supported in Library
 
 * Test Runner           : Cucumber
@@ -129,7 +148,9 @@ $cucumber -d --format html --out report.html --format pretty
 * Web Testing           : Capybara ,Selenium Webdriver [chrome,firefox,poltergeist(headless)]
 * Mobile App            : Appium (Android and iOS)
 * Mobile Web            : Appium (Android Browser ,Chrome,iOS Safari)  
-* Cloud Testing Infra   : SauceLab (will add more)
+* Performance Testing   : Gatling
+* Setup, Deployment     : Docker   
+* Cloud Testing Infra   : SauceLab
 * Feature documentation : sinatra app [viewer]
 * Code documentation    : Yard
 * Code smells           : Cuke sniffer ,Rubocop
@@ -267,9 +288,12 @@ http://www.rubydoc.info/gems/site_prism/frames
 https://github.com/teampoltergeist/poltergeist
 * Cucumber
 http://www.rubydoc.info/github/cucumber/cucumber-ruby/
-https://github.com/cucumber/cucumber/wiki
 * Rest-Client
 http://www.rubydoc.info/github/rest-client/rest-client/master
+* Docker https://docs.docker.com/engine/quickstart/
+* Gatling http://gatling.io/#/docs
+
+
 
 ## Troubleshooting
 

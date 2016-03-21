@@ -1,0 +1,28 @@
+current directory: /opt/bddfire/vendor/ruby/2.3.0/gems/unf_ext-0.0.7.2/ext/unf_ext
+/usr/local/bin/ruby -r ./siteconf20160321-17-1p2lcdh.rb extconf.rb
+checking for main() in -lstdc++... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /opt/bddfire/vendor/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/unf_ext-0.0.7.2/mkmf.log
+
+current directory: /opt/bddfire/vendor/ruby/2.3.0/gems/unf_ext-0.0.7.2/ext/unf_ext
+make "DESTDIR=" clean
+make: Warning: File 'Makefile' has modification time 33 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+current directory: /opt/bddfire/vendor/ruby/2.3.0/gems/unf_ext-0.0.7.2/ext/unf_ext
+make "DESTDIR="
+make: Warning: File 'Makefile' has modification time 33 s in the future
+compiling unf.cc
+cc1plus: warning: command line option '-Wdeclaration-after-statement' is valid for C/ObjC but not for C++
+cc1plus: warning: command line option '-Wimplicit-function-declaration' is valid for C/ObjC but not for C++
+linking shared-object unf_ext.so
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+current directory: /opt/bddfire/vendor/ruby/2.3.0/gems/unf_ext-0.0.7.2/ext/unf_ext
+make "DESTDIR=" install
+make: Warning: File 'Makefile' has modification time 26 s in the future
+/usr/bin/install -c -m 0755 unf_ext.so ./.gem.20160321-17-32jy5u
+make: warning:  Clock skew detected.  Your build may be incomplete.

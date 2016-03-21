@@ -100,6 +100,52 @@ task :drop_viewer, :port do |t,args|
   puts "completed dropping feaures from database"
 end
 
+task :cleanup do
+  puts ' ========Deleting old reports ang logs========='
+  FileUtils.rm_rf('reports')
+  File.delete('cucumber_failures.log') if File.exist?('cucumber_failures.log')
+  File.new('cucumber_failures.log', 'w')
+  Dir.mkdir('reports')
+end
+
+task :parallel_run do
+  puts '===== Executing Tests in parallel'
+  system 'bundle exec parallel_cucumber features/ -o "-p parallel -p poltergeist -p pretty" -n 10'
+  puts ' ====== Parallel execution finished and cucumber_failure.log created ========='
+end
+
+task :rerun do
+  if File.size('cucumber_failures.log') == 0
+    puts '==== No failures. Everything Passed ========='
+  else
+    puts ' =========Re-running Failed Scenarios============='
+    system 'bundle exec cucumber @cucumber_failures.log -f pretty'
+  end
+end
+
+task parallel_cucumber: [:cleanup, :parallel_run, :rerun]
+
+Cucumber::Rake::Task.new(:sauce) do |t|
+  t.cucumber_opts = 'features -p sauce --format pretty --profile html '
+end
+
+task :cuke_sniffer do
+  sh 'bundle exec cuke_sniffer --out html reports/cuke_sniffer.html'
+end
+
+task :rubocop do
+  sh 'bundle exec rubocop features/'
+end
+
+
+task :docker do
+  puts '========Preparing docker environment to run cucumber tests inside docker containers======='
+  sh 'sh docker.sh'
+end
+
+task checkup: [:cleanup, :cuke_sniffer]
+
+
 YARD::Rake::YardocTask.new(:yard) do |t|
 t.files   = ['features/**/*.feature', 'features/**/*.rb']
 end

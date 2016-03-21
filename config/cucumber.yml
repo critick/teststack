@@ -10,3 +10,6 @@ default    : <%= config_requires %> --format json -o cucumber.json --format pret
 web        : <%= web_requires %> --format json -o cucumber.json --format pretty --format html --out report.html  --tags @web
 forumapi   : <%= forumapi_requires %> --format json -o cucumber.json --format pretty --format html --out report.html --tags @forumapi
 auth_api   : <%= auth_api_requires %> --format json -o cucumber.json --format html --out report.html --format pretty --tags @auth_api
+
+
+#sauce : DRIVER=sauce

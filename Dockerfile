@@ -16,8 +16,8 @@ RUN apt-get update && apt-get install -y \
   build-essential \
   nodejs
 
-RUN mkdir -p /opt/bddfire
-WORKDIR /opt/bddfire
+RUN mkdir -p /opt/testing
+WORKDIR /opt/testing
 
 
 RUN gem install bundler

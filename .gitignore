@@ -18,3 +18,4 @@ logs/appium_logs.txt
 *.log
 *.zip
 load/gatling-charts-highcharts-bundle-2.1.7
+vendor/*

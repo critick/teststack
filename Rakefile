@@ -22,7 +22,7 @@ end
 
 
 Cucumber::Rake::Task.new(:web) do |t|
-  t.cucumber_opts = " DRIVER=poltergeist
+  t.cucumber_opts = " DRIVER=firefox
                       APP=web
                       SERVER=http://demo.upgrad.com
                       features -p web "

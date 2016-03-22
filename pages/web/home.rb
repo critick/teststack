@@ -1,6 +1,8 @@
 module Pages
     module Web
         class HomePage < SitePrism::Page
+          include RSpec::Matchers
+
           set_url '/'
           set_url_matcher(/$/)
 
@@ -19,6 +21,7 @@ module Pages
           element :login_password,'.login-pass', visible: true
           element :login_button,'.login-button-nav', visible: true
           element :forgot_password,'.forgot-password-text'
+          element :account_details,'#dropdown-menu-1', text: "My Account"
 
           element :error_toast,'.errorToast'
           element :loading,'#loading-message',visible: true
@@ -42,6 +45,11 @@ module Pages
           def verify_error_toast(message)
               expect(error_toast).to have_text(message)
           end
+
+          def verify_login
+              has_account_details?
+          end
+
         end
     end
 end

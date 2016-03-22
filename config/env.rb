@@ -129,12 +129,12 @@ case ENV['APP']
         Capybara.register_driver :poltergeist do |app|
 
             options = { :js_errors => true,
-                        :timeout => 200,
+                        :timeout => 100,
                         :debug => true,
                         :phantomjs_options => ['--ignore-ssl-errors=yes',
                                                '--ssl-protocol=any',
                                                '--load-images=false',
-                                               '--disk-cache=true'],
+                                               '--disk-cache=false'],
                         :inspector => true,
                         :window_size => [1920, 6000]
                       }
@@ -311,14 +311,14 @@ case ENV['APP']
        # end
   end
 
-require 'vcr'
+#require 'vcr'
 
-VCR.configure do |c|
-  c.cassette_library_dir = 'data/fixtures/vcr_cassettes'
-  c.hook_into :webmock
-  #VCR to handle requests made while a cassette is in use
-  c.allow_http_connections_when_no_cassette = true
-end
+#VCR.configure do |c|
+#  c.cassette_library_dir = 'data/fixtures/vcr_cassettes'
+#  c.hook_into :webmock
+#  #VCR to handle requests made while a cassette is in use
+#  c.allow_http_connections_when_no_cassette = true
+#end
 
 VCR.cucumber_tags do |t|
   t.tag '@vcr', :use_scenario_name => true

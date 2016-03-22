@@ -15,8 +15,7 @@ end
 Then(/^I should see "(.*?)"$/) do |status|
     case status
     when "home"
-         expect(@web.home).to be_displayed
-         #expect(@web.login).to have_text(status)
+         @web.home.verify_login
     end
 
     # add this to helper ,should be called only in case of Poltergeist

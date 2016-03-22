@@ -19,10 +19,10 @@ export GATLING_HOME=~/tmp/gatling-charts-highcharts-bundle-${GATLING_VERSION}
 
 # Remove default simulations and Config and add our own
 
-#rm -rf gatling-charts-highcharts-bundle-${GATLING_VERSION}/user-files/
-#rm -rf gatling-charts-highcharts-bundle-${GATLING_VERSION}/conf
-#cp -rf user-files/ gatling-charts-highcharts-bundle-${GATLING_VERSION}/user-files/
-#cp -rf config/ gatling-charts-highcharts-bundle-${GATLING_VERSION}/config
+rm -rf ~/tmp/gatling-charts-highcharts-bundle-${GATLING_VERSION}/user-files/
+rm -rf ~/tmp/gatling-charts-highcharts-bundle-${GATLING_VERSION}/conf
+cp -rf user-files/ ~/tmp/gatling-charts-highcharts-bundle-${GATLING_VERSION}/user-files/
+cp -rf config/ ~/tmp/gatling-charts-highcharts-bundle-${GATLING_VERSION}/config
 
 # RUN Gatling TEST WITH CLASS CLASS/TEST SCENARIO SPECIFIED
 

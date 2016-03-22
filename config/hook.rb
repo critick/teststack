@@ -19,9 +19,13 @@ begin
 end
 
 
-Before do |scenario|
+
+Before do #|scenario|
    case ENV['APP']
         when "web"
+        if  Capybara.current_session.driver.is_a?(Capybara::Poltergeist::Driver)
+            page.driver.reset!
+        end
         @web ||= Pages::Web::Application.new
         when "native"
         @app ||= Pages::App::Application.new
@@ -36,6 +40,7 @@ After do #|scenario|
       when "web"
            if    Capybara.current_session.driver.is_a?(Capybara::Poltergeist::Driver)
                  Capybara.current_session.driver.restart
+                 Capybara.reset_sessions!
            else
                  Capybara.current_session.driver.quit
            end

@@ -1,3 +1,6 @@
 [submodule "lib/reporting"]
 	path = lib/reporting
 	url = git@github.com:irfanah/cucumber-sandwich.git
+	[submodule "wiki"]
+		path = wiki
+		url = git@bitbucket.org:upgrad_team/acceptance_test.git/wiki

@@ -19,3 +19,4 @@ logs/appium_logs.txt
 *.zip
 load/results/
 vendor/*
+cucumber-html-reports/*

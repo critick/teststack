@@ -7,4 +7,4 @@
 :safe_mode: false
 
 :"yard-cucumber":
-  menus: [ 'features', 'directories', 'tags', 'steps', 'step definitions' ]
+menus: [ 'features', 'directories', 'tags', 'steps', 'step definitions' ]

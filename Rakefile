@@ -153,7 +153,7 @@ end
 
 
 YARD::Rake::YardocTask.new(:yard) do |t|
-t.files   = ['features/**/*.feature', 'features/**/*.rb']
+#t.files   = ['features/**/*.feature', 'features/**/*.rb']
 end
 
 #task :default => [:web]

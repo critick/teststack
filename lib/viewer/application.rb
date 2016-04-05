@@ -102,12 +102,12 @@ end
 
 get '/?' do
   first_project = Viewer::Project.first
-  if first_project
-    redirect "/projects/#{first_project.name}"
-  else
+  #if first_project
+    #redirect "/projects/#{first_project.name}"
+  #else
     readme_path = File.expand_path(File.join(File.dirname(__FILE__), "../../README.md"))
     markdown File.read(readme_path), :layout => false
-  end
+  #end
 end
 
 get '/robots.txt' do

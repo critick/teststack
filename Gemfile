@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'selenium-webdriver'
-gem 'cucumber','2.1.0'
+gem 'cucumber'
 gem 'faker'
 gem 'nokogiri'
 gem 'rspec'
@@ -43,7 +43,7 @@ gem 'sshkit'
 gem 'sinatra'
 gem "haml"
 gem "rdiscount"
-gem 'gherkin','2.12.2'
+gem 'gherkin'
 gem "gherkin3"
 gem "komainu"
 gem "mongo_mapper"

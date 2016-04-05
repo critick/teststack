@@ -6,15 +6,14 @@ discuss:
   phoneNumber:  "999999999"
   username:     "user1@upgrad.com"
   password:     "password"
-  auth_token:   eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJzZXNzaW9uSURcIjpcIngxMjM0NTY3ODkyXCIsXCJ1c2VybmFtZVwiOlwidXNlcjFAdXBncmFkLmNvbVwifSJ9.PhjjvZubALbgYLAAOnccOg4sAyn1hAlbxaOPVXSBRZ4V6GQg720-mFaUy97ADzRO1J-9JNWv9YJPnNbb2mAAEg
-  sessionid:    x1234567892
+  auth_token:   eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJzZXNzaW9uSURcIjpcIl9maTA2NzNobXJcIixcInVzZXJuYW1lXCI6XCJ1c2VyMUB1cGdyYWQuY29tXCJ9In0.XWD2x_rc7QBS5UDB92n7Gc99k3KNv15UeC0TzG30RPCZ7osQdYaUCUyxeI6YwktzdU_LK3qlwNTHZxUQ-36haw
+  sessionid:    _fi0673hmr
   answer:       "this is default answer"
   questionId:   "10"
   content_type: "application/json"
   comment:      "this is a testing comment"
-  answerId:     "5056"
+  answerId:     "1"
 
 web:
   email:         "irfan.ahmad@upgrad.com"
   password:      "password"
-  

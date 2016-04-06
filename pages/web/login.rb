@@ -12,6 +12,7 @@ module Pages
           element :loading,'#loading-message',visible: true
 
           def log_in(number,password)
+              
               if has_no_loading?                       # wait till loading screen appears
                  user_number.set(number)
                  user_password.set(password)

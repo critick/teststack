@@ -20,10 +20,11 @@ end
 
 
 
-Before do #|scenario|
+Before do |scenario|
    case ENV['APP']
         when "web"
         if  Capybara.current_session.driver.is_a?(Capybara::Poltergeist::Driver)
+            Capybara.reset_sessions!
             page.driver.reset!
         end
         @web ||= Pages::Web::Application.new

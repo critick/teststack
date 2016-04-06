@@ -4,7 +4,7 @@ module Pages
           include RSpec::Matchers
 
           set_url '/applications'
-          set_url_matcher(/\applications$/)
+          set_url_matcher(/applications$/)
 
 
           element :account_details,'#dropdown-menu-1', text: "My Account"

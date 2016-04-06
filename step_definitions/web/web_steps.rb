@@ -1,5 +1,4 @@
 Given(/^I am on home page$/) do
-     binding.pry
      @web.home.load
      page.driver.reset!
      @web.home.load
@@ -16,13 +15,13 @@ end
 
 When(/^views "([^"]*)" details$/) do |course|
     sleep 10
-    binding.pry
     @web.home.view_course(course)
-    expect(@web.entherprenurship).to be_displayed #change
+    #expect(@web.entherprenurship).to be_displayed #change
 end
 
 When(/^Apply to "([^"]*)"$/) do |course|
     @web.entherprenurship.load
+    sleep 5
     @web.entherprenurship.apply
     sleep 5  # url redirection is not correct first time ,change after bugfix
     expect(@web.preview).to be_displayed

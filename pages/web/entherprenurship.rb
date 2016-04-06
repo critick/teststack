@@ -4,7 +4,7 @@ module Pages
           include RSpec::Matchers
 
           set_url '/programs/entrepreneurship/'
-
+          set_url_matcher(/programs\/entherprenurship$/)
 
           # individual elements
           element :apply_now,'#apply-now-nav-text'

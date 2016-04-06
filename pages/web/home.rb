@@ -37,7 +37,6 @@ module Pages
 
 
           def log_in()
-              binding.pry
               if has_login_link?
                  login_link.click
                  login_email.set(email)
@@ -62,7 +61,6 @@ module Pages
           end
 
           def view_course(course)
-              binding.pry
               if has_view_programs?
                  view_programs.click
                  case course

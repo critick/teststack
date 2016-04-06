@@ -17,7 +17,7 @@ Examples:        Authorized user and  Login
                  | email                    | password   | status  |
                  | "irfan.ahmad@upgrad.com" | "password" | "home"  |
 
-
+@web
 Scenario Outline: login to upgrad
 
                  When  <user_type> user login to upgrad

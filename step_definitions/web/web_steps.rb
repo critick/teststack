@@ -43,3 +43,19 @@ Then(/^I should see "(.*?)"$/) do |status|
        end
     end
 end
+
+When(/^I signup as "([^"]*)" user$/) do |arg1|
+  pending
+end
+
+Then(/^I should see applicatio page$/) do
+  pending
+end
+
+When(/^I register as new user$/) do
+  pending
+end
+
+When(/^apply for "([^"]*)"$/) do |arg1|
+  pending
+end

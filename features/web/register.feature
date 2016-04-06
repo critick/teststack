@@ -3,26 +3,22 @@ Feature:          Web - New Student Application
                   I  want to signup on upgrad website
                   In order to login and apply for courses
 
-
-Scenario Outline: login to upgrad with explicit credentials
-
+Background:
                   Given I am on home page
-                  When  I login in with <email> and <password>
-                  Then  I should see <status>
+@web
+Scenario:         Signup new user
 
-Examples:        Authorized user and  Login
+                  When  I signup as "new" user
+                  Then  I should see applicatio page
 
-                 | email                    | password   | status  |
-                 | "irfan.ahmad@upgrad.com" | "password" | "home"  |
+@web
+Scenario Outline: apply to course
 
-
-Scenario Outline: login to upgrad
-
-                 Given I am on home page
-                 When  I login to upgrad
+                 When  I register as new user
+                 And   apply for <course>
                  Then  I should see <status>
 
 Examples:        Authorized user and  Login
 
-                | email                    | password   | status  |
-                | "irfan.ahmad@upgrad.com" | "password" | "home"  |
+                | course             | status     |
+                | "entherprenurship" | "preview"  |

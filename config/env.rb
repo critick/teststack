@@ -128,7 +128,7 @@ case ENV['APP']
 
         Capybara.register_driver :poltergeist do |app|
 
-            options = { :js_errors => false,
+            options = { :js_errors => true,
                         :timeout => 100,
                         :debug => true,
                         :phantomjs_options => ['--ignore-ssl-errors=yes',

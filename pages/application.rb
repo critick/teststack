@@ -25,6 +25,23 @@ module Pages
     end
   end
 
+  module WebApp
+    class Application
+      def initialize
+         @pages = {}
+      end
+
+      def login
+          @pages[:login] ||= Pages::WebApp::LoginPage.new
+      end
+
+      def dashboard
+          @pages[:dashboard] ||= Pages::WebApp::Dashboard.new
+      end
+
+    end
+  end
+
 
   module MobileApp
      class Application

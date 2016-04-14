@@ -35,14 +35,14 @@ module Pages
           element :data_analytics,'.btn.btn-primary.notify-me-button.view-details-card-button.fb-da-view-details'
           element :digital_marketing,'.btn.btn-primary.notify-me-button.view-details-card-button.fb-dgtl-mrkt-view-details'
 
-          def log_in()
+          def log_in
               if has_login_link?
                  login_link.click
                  login_email.set(email)
                  login_password.set(password)
                  login_button.click
               else
-                 puts "unable to login"
+                 raise "unable to login"
               end
           end
 

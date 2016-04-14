@@ -29,6 +29,15 @@ Cucumber::Rake::Task.new(:web) do |t|
                       features -p web "
 end
 
+Cucumber::Rake::Task.new(:webapp) do |t|
+  t.cucumber_opts = " DRIVER=poltergeist
+                      APP=web
+                      DEBUG=true
+                      SERVER=http://stagingapp.upgrad.com
+                      features -p webapp "
+end
+
+
 Cucumber::Rake::Task.new(:android) do |t|
   t.cucumber_opts = " DRIVER=appium
                       APP=native

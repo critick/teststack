@@ -127,10 +127,9 @@ case ENV['APP']
         #ShowMeTheCookies.register_adapter(:custom_selenium_a, ShowMeTheCookies::Selenium)
 
         Capybara.register_driver :poltergeist do |app|
-
-            options = { :js_errors => true,
+            options = { :js_errors => ENV['DEBUG'].to_b,
                         :timeout => 100,
-                        :debug => true,
+                        :debug => ENV['DEBUG'].to_b,
                         :phantomjs_options => ['--ignore-ssl-errors=yes',
                                                '--ssl-protocol=any',
                                                '--load-images=false',

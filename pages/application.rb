@@ -10,12 +10,12 @@ module Pages
          @pages[:home] ||= Pages::Web::HomePage.new
      end
 
-     def entherprenurship
-         @pages[:entherprenurship] ||= Pages::Web::Entherprenurship.new
+     def entrepreneurship
+         @pages[:entrepreneurship] ||= Pages::Web::Entrepreneurship.new
      end
 
-     def application
-         @pages[:application] ||= Pages::Web::Application.new
+     def applications
+         @pages[:applications] ||= Pages::Web::Applications.new
      end
 
      def preview

@@ -14,24 +14,38 @@ When(/^"(.*?)" user login to upgrad$/) do |user_type|
 end
 
 When(/^views "([^"]*)" details$/) do |course|
-    sleep 10
+    @web.home.verify_login
     @web.home.view_course(course)
-    #expect(@web.entherprenurship).to be_displayed #change
+    #@web.entrepreneurship.verify_title
+    #expect(@web.entrepreneurship).to be_displayed
+    #expect(@web.entrepreneurship).to have_text(arg1)
 end
 
-When(/^Apply to "([^"]*)"$/) do |course|
-    @web.entherprenurship.load
-    sleep 5
-    @web.entherprenurship.apply
-    sleep 5  # url redirection is not correct first time ,change after bugfix
-    expect(@web.preview).to be_displayed
+
+When(/^views his "([^"]*)" details/) do |course|
+    @web.home.verify_login
+    @web.home.view_my_applications
+    expect(@web.applications).to be_displayed
+    @web.applications.view_application(course)
+    #expect(@web.entrepreneurship).to be_displayed #change
 end
+
+
+When(/^Apply to "([^"]*)"$/) do |course|
+    @web.entrepreneurship.apply
+    sleep 5  # url redirection is not correct first time ,change after bugfix
+    #expect(@web.preview).to be_displayed
+    @web.preview.verify_preview_details
+end
+
 
 
 Then(/^I should see "(.*?)"$/) do |status|
     case status
     when "home"
          @web.home.verify_login
+    when "preview"
+         @web.preview.verify_preview_details
     end
 
     # add this to helper ,should be called only in case of Poltergeist
@@ -58,4 +72,8 @@ end
 
 When(/^apply for "([^"]*)"$/) do |arg1|
   pending
+end
+
+def wait_for_page_load (page)
+  expect(page).not_to have_css('#loading',visible: true)
 end

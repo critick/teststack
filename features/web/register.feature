@@ -21,4 +21,4 @@ Scenario Outline: apply to course
 Examples:        Authorized user and  Login
 
                 | course             | status     |
-                | "entherprenurship" | "preview"  |
+                | "entrepreneurship" | "preview"  |

@@ -1,16 +1,17 @@
 module Pages
     module Web
-        class Entherprenurship < SitePrism::Page
+        class Entrepreneurship < SitePrism::Page
           include RSpec::Matchers
 
           set_url '/programs/entrepreneurship/'
-          set_url_matcher(/programs\/entherprenurship$/)
+          #set_url_matcher(/programs\/entrepreneurship$/)
 
           # individual elements
           element :apply_now,'#apply-now-nav-text'
           element :account_details,'#dropdown-menu-1', text: "My Account"
           element :upgrad_logo,'.navbar-brand>img'
           element :request_demo,'#footer-request-info', text: "Request Free Demo"
+          element :title,'.text-center.white-text.bold-font',text: 'Become an Entrepreneur. Today.'
 
           element :highlights_tab,'#course-tabs-active>a', text: "Highlights"
           element :curriculum_tab,'.course-tabs-list-item>a', text: "Curriculum"
@@ -26,11 +27,16 @@ module Pages
           end
 
           def apply
+            binding.pry
             if has_apply_now?
                apply_now.click
             else
-               puts "unable to apply"
+               raise "unable to apply"
             end
+          end
+
+          def verify_title
+               has_title?
           end
 
         end

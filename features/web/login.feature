@@ -29,7 +29,7 @@ Examples:        Authorized user and  Login
                 | "existing"  | "home"  |
 
 
-@web
+
 Scenario Outline: preview the application
 
                   When  <user_type> user login to upgrad
@@ -40,4 +40,16 @@ Scenario Outline: preview the application
 Examples:        students for different courses
 
                   | user_type   | course              | status     |
-                  | "existing"  | "entherprenurship"  | "preview"  |
+                  | "existing"  | "entrepreneurship"  | "preview"  |
+
+@web
+Scenario Outline: preview the application from my applications
+
+                  When  <user_type> user login to upgrad
+                  And   views his <course> details
+                  Then  I should see <status>
+
+Examples:        students for different courses
+
+                  | user_type   | course              | status     |
+                  | "existing"  | "entrepreneurship"  | "preview"  |

@@ -121,14 +121,14 @@ viewer will run at  as http://<server-name>/projects/tests
 $cucumber -d --format html --out report.html --format pretty
 ```
 
-### Docker
+### Setup with Docker
 We can run our cucumber scenario inside Docker containers. Assuming you have Docker installed.
 
 ```bash
 $bundle exec rake docker
 ```
 
-This will build Docker image 'testing-ci' and run cucumber scenarios inside container 'testing-ci'.
+This will build Docker image 'testing-ci' and run cucumber web scenarios inside container 'testing-ci'.
 
 
 ### Performance Testing - Gatling
@@ -223,9 +223,13 @@ On Mac
 ```bash
 $brew install phantomjs
 ```
-On Ubuntu,you  use below command
+On Ubuntu,you  use below command ,to install phantomjs (2.2.1)
 ```bash
-$sudo apt-get install phantomjs
+$PHANTOM_JS="phantomjs-2.1.1-linux-x86_64"
+$curl -L -O https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
+$tar xvjf $PHANTOM_JS.tar.bz2
+$mv $PHANTOM_JS /usr/local/share
+$ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
 ```
 
 3.For Chromedriver

@@ -24,6 +24,7 @@ end
 Cucumber::Rake::Task.new(:web) do |t|
   t.cucumber_opts = " DRIVER=poltergeist
                       APP=web
+                      DEBUG=false
                       SERVER=http://demo.upgrad.com
                       features -p web "
 end

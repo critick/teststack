@@ -31,10 +31,9 @@ module Pages
 
           # view programs and details
           element :view_programs,'.btn.btn-danger.apply-now-button-main.view-programs-video-home.text-uppercase'
-          element :entherprenurship,'.btn.btn-primary.notify-me-button.view-details-card-button.fb-ent-view-details'
+          element :entrepreneurship,'.btn.btn-primary.notify-me-button.view-details-card-button.fb-ent-view-details'
           element :data_analytics,'.btn.btn-primary.notify-me-button.view-details-card-button.fb-da-view-details'
           element :digital_marketing,'.btn.btn-primary.notify-me-button.view-details-card-button.fb-dgtl-mrkt-view-details'
-
 
           def log_in()
               if has_login_link?
@@ -61,11 +60,12 @@ module Pages
           end
 
           def view_course(course)
+              binding.pry
               if has_view_programs?
                  view_programs.click
                  case course
-                 when "entherprenurship"
-                      entherprenurship.click
+                 when "entrepreneurship"
+                      entrepreneurship.click
                  when "data_analytics"
                       data_analytics.click
                  when "digital_marketing"
@@ -74,6 +74,10 @@ module Pages
               end
           end
 
+          def view_my_applications
+              account_details.click
+              my_applications.click
+          end
 
         end
     end

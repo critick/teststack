@@ -1,4 +1,4 @@
-Feature:          Web - Existing Student
+Feature:          Student
                   As a user
                   I  want to  login on student platform
                   In order to start learining on course

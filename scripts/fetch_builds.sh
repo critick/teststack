@@ -17,8 +17,6 @@ BUILD_PATTERN="$1_$2_debug_[0-9].*.apk"
 
 if [ $1 == "example" ] ;then
    APP_PATH="android"
-elif [ $1 == "restaurant" ] ;then
-   APP_PATH="restaurant_android"
 else
    echo "app name: $1 is invalid"
    exit 1

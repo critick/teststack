@@ -7,4 +7,4 @@
 
 default    : <%= config_requires %> --format json -o cucumber.json --format pretty
 web        : <%= web_requires %> --format json -o cucumber.json --format pretty --format html --out report.html  --tags @web
-api        : <%= forumapi_requires %> --format json -o cucumber.json --format pretty --format html --out report.html --tags @api
+api        : <%= api_requires %> --format json -o cucumber.json --format pretty --format html --out report.html --tags @api

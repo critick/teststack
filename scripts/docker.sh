@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 WORKSPACE=$(pwd)
 CONTAINER_NAME="teststack"
 IMAGE_NAME="teststack"

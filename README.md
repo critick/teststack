@@ -17,107 +17,129 @@ This is Testing Framework based on BDD principles in Ruby ,you can use this for
 
 From the project root directory
 To run with for specific application  
-```bash  
-$cucumber DRIVER=<driver_name> APP=<app_type> SERVER=<server_name>
+```  
+$ cucumber DRIVER=<driver_name> APP=<app_type> SERVER=<server_name>
 ```
 
-(Eg :to run only API type tests for test server)
+(Eg :to run only API type tests for app running on example server)
 
-```bash  
-$cucumber DRIVER=chrome APP=web SERVER=https://test.example.com -p api
+```  
+$ cucumber DRIVER=chrome APP=web SERVER=https://example.com -p api
 ```
 
-DRIVER can be firefox, chrome, poltergeist(headless) ,appium
-APP  can be web or native for Android and iOS native apps, default is web
-SERVER can be any backend api server
+* DRIVER can be firefox, chrome, poltergeist(for headless), appium
+* APP  can be web or native for Android and iOS native apps, default is web
+* SERVER can be any backend api server URL
 
 profile can be any of the below
 
-1. api      :run all tests for api
-2. web      :run all tests for web
+* api      :run all tests for api
+* web      :run all tests for web
 
 
 OR if you want to run a single feature only
 
-```bash
-$cucumber DRIVER=poltergeist SERVER=https://test.example.com features/<feature_name>.feature
+```
+$ cucumber DRIVER=poltergeist SERVER=https://test.example.com features/<feature_name>.feature
 ```
 
 OR if you want to run all features with report
-```bash
-$cucumber DRIVER=<driver_name> SERVER=<server_name> --format html --out report.html
+```
+$ cucumber DRIVER=<driver_name> SERVER=<server_name> features/<feature_name>.feature --format html --out report.html
 ```
 
 if you want to run all features with console output of test results
-```bash
-$cucumber DRIVER=<driver_name> SERVER=<server_name> --format pretty
+```
+$ cucumber DRIVER=<driver_name> SERVER=<server_name> --format pretty
 ```
 
-OR For Lazy Forks we have rake tasks
-
+OR For Lazy Forks (like me) we have rake tasks
 
 1.to run api tests
-```bash
-$rake api
 ```
+$ rake api
+```
+
+2.to run web tests
+```
+$ rake web
+```
+
+3.to run api tests
+```
+$ rake android
+```
+
+4.to run load tests
+```
+$ rake load
+```
+
 
 ### Generate Test Documents online with viewer
 
 To deploy viewer locally
 
 1.make sure mongo db is installed and running
- brew install mongodb
+```
+$  brew install mongodb
+```
 
 start mongodb by running ,
-```bash
-$mongod
+```
+$ mongod
 ```
 
 2.start the sinatra server
 
-```bash
-$rake serve_viewer
+```
+$ rake serve_viewer
 ```
 3.push features into database
-```bash
-$rake push_viewer
+```
+$ rake push_viewer
 ```
 viewer will run at  as localhost:4567/projects/tests
 
 4.push features into databasex
-```bash
-$rake drop_viewer
+```
+$ rake drop_viewer
 ```
 To deploy viewer sinatra app on server
 
 1.start unicorn server as a deamon ,it will start on port 8080
 
-```bash
-$unicorn -c unicorn.rb -D
+```
+$ unicorn -c unicorn.rb -D
 ```
 2.push features into database
-```bash
-$rake push_viewer 8080
+```
+$ rake push_viewer 8080
 ```
 
 3.push features into database
-```bash
-$rake drop_viewer 8080
+```
+$ rake drop_viewer 8080
 ```
 
 viewer will run at  as http://<server-name>/projects/tests
 
 ##Test cases documentation
 
-```bash
-$cucumber -d --format html --out report.html --format pretty
+```
+$ cucumber -d --format html --out report.html --format pretty
+```
+
+## Code documentation with Yard Server
+```
+$ yard server
 ```
 
 ### Setup with Docker
 We can run our cucumber scenario inside Docker containers. Assuming you have Docker installed.
 
-```bash
-$bundle exec rake docker
+```
+$ bundle exec rake docker
 ```
 
 This will build Docker image 'teststack' and run cucumber web scenarios inside container 'teststack'.
@@ -288,19 +310,19 @@ When using Appium.app make sure to set Appium -> Preferences… -> Check “Use 
 
 Fix permission errors. npm shouldn’t require sudo.
 
-```bash
-$brew uninstall node
-$brew install node
-$rm -rf ./node_modules
-$rm -rf "/Users/`whoami`/.npm"
-$rm -rf /usr/local/lib/node_modules/
-$./reset.sh --ios
-$./reset.sh --android
+```
+$ brew uninstall node
+$ brew install node
+$ rm -rf ./node_modules
+$ rm -rf "/Users/`whoami`/.npm"
+$ rm -rf /usr/local/lib/node_modules/
+$ ./reset.sh --ios
+$ ./reset.sh --android
 ```
 
 If you see config errors, try cleaning git.
-```bash
-$git clean -dfx; git reset --hard
+```
+$ git clean -dfx; git reset --hard
 ```
 ## Wiki
 https://github.com/irfanah/TestStack/wiki

@@ -10,8 +10,8 @@ ADB_SERIAL = ""  #device name please
 
 Cucumber::Rake::Task.new(:api) do |t|
   t.cucumber_opts = " -x APP=api
-                      SERVER=https://example.com
-                      features -p auth_api "
+                      SERVER=192.168.99.100:5000
+                      features -p api "
 end
 
 
@@ -19,7 +19,7 @@ Cucumber::Rake::Task.new(:web) do |t|
   t.cucumber_opts = " DRIVER=poltergeist
                       APP=web
                       DEBUG=false
-                      SERVER=http://example.com
+                      SERVER=192.168.99.100:5000
                       features -p web "
 end
 
@@ -28,7 +28,7 @@ Cucumber::Rake::Task.new(:android) do |t|
   t.cucumber_opts = " DRIVER=appium
                       APP=native
                       OS=android
-                      SERVER=https://upgrad.com
+                      SERVER=192.168.99.100:5000
                       features -p android "
 end
 
@@ -110,7 +110,7 @@ task parallel_cucumber: [:cleanup, :parallel_run, :rerun]
 
 task :docker do
   puts 'preparing docker to run cucumber tests inside docker containers....'
-  sh 'sh docker.sh'
+  sh  'sh ./scripts/docker.sh'
 end
 
 task :load do

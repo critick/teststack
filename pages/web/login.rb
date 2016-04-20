@@ -4,6 +4,14 @@ module Pages
           set_url '/'
           set_url_matcher(/$/)
 
+          attr_accessor  :email, :password
+
+          def initialize(args = {})
+              @fixture   =  TestData.get_fixtures("web")
+              @email     =  @fixture["email"]
+              @password  =  @fixture["password"]
+          end
+
           # individual elements
           element :user_number,'.form-control',visible: true
           element :user_password,'#password',visible: true
@@ -12,7 +20,7 @@ module Pages
           element :loading,'#loading-message',visible: true
 
           def log_in(number,password)
-              
+
               if has_no_loading?                       # wait till loading screen appears
                  user_number.set(number)
                  user_password.set(password)

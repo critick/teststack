@@ -21,27 +21,26 @@ To run with for specific application
 $cucumber DRIVER=<driver_name> APP=<app_type> SERVER=<server_name>
 ```
 
-(Eg :to run only API type tests for forum over dev server)
+(Eg :to run only API type tests for test server)
 
 ```bash  
-$cucumber DRIVER=chrome APP=web SERVER=https://dev.example.com -p forumapi
+$cucumber DRIVER=chrome APP=web SERVER=https://test.example.com -p api
 ```
 
-DRIVER can be firefox, chrome, poltergeist(headless) ,appium [working on IE ]
+DRIVER can be firefox, chrome, poltergeist(headless) ,appium
 APP  can be web or native for Android and iOS native apps, default is web
 SERVER can be any backend api server
 
-
 profile can be any of the below
 
-1. smoke      :run all smoke tests for all apis
-2. forumapi   :run all tests for forumapi
+1. api      :run all tests for api
+2. web      :run all tests for web
 
 
 OR if you want to run a single feature only
 
 ```bash
-$cucumber DRIVER=poltergeist SERVER=https://api-release.example.com features/<feature_name>.feature
+$cucumber DRIVER=poltergeist SERVER=https://test.example.com features/<feature_name>.feature
 ```
 
 OR if you want to run all features with report
@@ -54,20 +53,12 @@ if you want to run all features with console output of test results
 $cucumber DRIVER=<driver_name> SERVER=<server_name> --format pretty
 ```
 
-for smoke api tests
-```bash
-$cucumber APP=api SERVER=http://api-release.example.com features -p smoke
-```
-to debug api tests
-```bash
-$cucumber APP=api DEBUG=true SERVER=http://api-release.example.com features -p level0
-```
 OR For Lazy Forks we have rake tasks
 
 
-1.to run forum api tests
+1.to run api tests
 ```bash
-$rake forumapi
+$rake api
 ```
 
 ### Generate Test Documents online with viewer
@@ -134,9 +125,10 @@ This will build Docker image 'teststack' and run cucumber web scenarios inside c
 
 ### Performance Testing - Gatling
 You can use Gatling setup to execute load tests against your endpoints. Simply change 'load/user-files/simulation/SampleLoadTEST.scala' file and puts your URL to Test as base URL.
-
-          $ cd load
-          $ sh gatling_local.sh
+```
+$ cd load
+$ sh gatling_local.sh
+```
 This will run load tests against your url. You are free to record new simulations. Once finished there will be link to HTML report at the end.
 
 There is CI integration to plug it with jenkins.
@@ -154,133 +146,121 @@ There is CI integration to plug it with jenkins.
 * Cloud Testing Infra   : SauceLab
 * Feature documentation : sinatra app [viewer]
 * Code documentation    : Yard
-* Code smells           : Cuke sniffer ,Rubocop
 
 
 ##Pre-requisite and How to Setup
 
 1.prepare system with package manager
 
-install homebrew on mac , MacPort installation is not recommended
+install homebrew on mac
 OR apt-get package manager on Ubuntu
 
 Install gpg on system ,for mac
 
-```bash
-$brew install gpg
+```
+$ brew install gpg
 ```
 OR on Ubuntu
 
-```bash
-$sudo apt-get install gpg
+```
+$ sudo apt-get install gpg
 ```
 
 2.Install Ruby on mac /ubuntu
 
 Install the latest stable release of Ruby.
-```bash
-$\curl -sSL https://get.rvm.io | bash -s stable
-$rvm install ruby
+```
+$ curl -sSL https://get.rvm.io | bash -s stable
+$ rvm install ruby
 ```
 
 Make sure rvm is using the correct ruby by default
-```bash
-$rvm list
-$rvm --default use 2.2.1
+```
+$ rvm list
+$ rvm --default use 2.2.1
 ```
 
 If you have an old ruby/rvm, you can examplee with
-```bash
-$rvm get head
-$rvm autolibs homebrew
-$rvm install ruby
+```
+$ rvm get head
+$ rvm autolibs homebrew
+$ rvm install ruby
 ```
 
 Check that it’s installed properly by printing the ruby version.
-```bash
-$ruby --version
+```
+$ ruby --version
 ```
 
 Update RubyGems and Bundler.
 
-```bash
-$gem update --system
-$gem install --no-rdoc --no-ri bundler
-$gem update
-$gem cleanup
-$gem install bundler
+```
+$ gem update --system
+$ gem install --no-rdoc --no-ri bundler
+$ gem update
+$ gem cleanup
+$ gem install bundler
 ```
 
 clone the repo and run bundle install ,all dependencies will be added
-```bash
-$git clone git@bitbucket.org:example_team/acceptance_test.git
-$cd acceptance_tests
-$bundle install
+
+```
+$ git clone git@github.com:irfanah/TestStack.git
+$ cd acceptance_tests
+$ bundle install
 ```
 
 2.For Poltergeist,
 On Mac
 
-```bash
-$brew install phantomjs
+```
+$ brew install phantomjs
 ```
 On Ubuntu,you  use below command ,to install phantomjs (2.2.1)
-```bash
-$PHANTOM_JS="phantomjs-2.1.1-linux-x86_64"
-$curl -L -O https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
-$tar xvjf $PHANTOM_JS.tar.bz2
-$mv $PHANTOM_JS /usr/local/share
-$ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
+
+```
+$ PHANTOM_JS="phantomjs-2.1.1-linux-x86_64"
+$ curl -L -O https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
+$ tar xvjf $PHANTOM_JS.tar.bz2
+$ mv $PHANTOM_JS /usr/local/share
+$ ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
 ```
 
 3.For Chromedriver
 
-```bash
-$gem install chromedriver
+```
+$ gem install chromedriver
 ```
 
 4.For Appium
 
 Install appium_console gem.
-```bash
-$gem uninstall -aIx appium_lib
-$gem uninstall -aIx appium_console
-$gem install --no-rdoc --no-ri appium_console
+```
+$ gem uninstall -aIx appium_lib
+$ gem uninstall -aIx appium_console
+$ gem install --no-rdoc --no-ri appium_console
 ```
 Install flaky gem.
-```bash
-$gem uninstall -aIx flaky
-$gem install --no-rdoc --no-ri flaky
+```
+$ gem uninstall -aIx flaky
+$ gem install --no-rdoc --no-ri flaky
 ```
 
 Install nodejs using brew.
-```bash
-$brew update
-$brew upgrade node
-$brew install node
+```
+$ brew update
+$ brew upgrade node
+$ brew install node
 ```
 Node should be v0.10.26 or better
 
-Install grunt.
-```bash
-$npm install -g grunt grunt-cli
-```
-Install ant .
-Install maven 3.1.1. Old maven will not work.
+Install appium
 
-Clone appium
-```bash
-$git clone git://github.com/appium/appium.git
-$cd appium; ./reset.sh
 ```
-to reset for a specific version and verbose logging
-```bash
-$cd appium ;./reset.sh --android --verbose
+$ npm install -g appium
+$ appium
 ```
-now start appium.
-```bash
-$node .
-```
+
 
 ## Library documentation
 * Appium

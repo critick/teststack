@@ -1,17 +1,10 @@
 <%
   config_requires        = "--require config --require step_definitions/api"
   web_requires           = "--require config --require step_definitions/web"
-  webapp_requires        = "--require config --require step_definitions/webapp"
-  forumapi_requires      = "--require config --require step_definitions/api"
-  auth_api_requires      = "--require config --require step_definitions/api"
+  api_requires           = "--require config --require step_definitions/api"
 %>
 
 
 default    : <%= config_requires %> --format json -o cucumber.json --format pretty
 web        : <%= web_requires %> --format json -o cucumber.json --format pretty --format html --out report.html  --tags @web
-webapp     : <%= webapp_requires %> --format json -o cucumber.json --format pretty --format html --out report.html  --tags @webapp
-forumapi   : <%= forumapi_requires %> --format json -o cucumber.json --format pretty --format html --out report.html --tags @forumapi
-authapi    : <%= auth_api_requires %> --format json -o cucumber.json --format html --out report.html --format pretty --tags @auth_api
-
-
-#sauce : DRIVER=sauce
+api        : <%= forumapi_requires %> --format json -o cucumber.json --format pretty --format html --out report.html --tags @api

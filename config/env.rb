@@ -194,85 +194,6 @@ case ENV['APP']
                                          :url => "http://0.0.0.0:4723/wd/hub")
         end
 
-        Capybara.register_driver :appium_device_web do |app|         #web apps on any device
-            capabilities = {
-                            :automationName => 'Appium',             # Appium (default) or Selendroid
-                            :app => '/path/to/app',                  # /abs/path/to/my.apk or http://myapp.com/app.ipa
-                            :platformName => 'Android',              # iOS, Android, or FirefoxOS
-                            :platformVersion => ' ',                 #  7.1, 4.4
-                            :deviceName => 'Android',                # iPhone Simulator, iPad Simulator, iPhone Retina 4-inch, Android Emulator, Galaxy S4, etc…. On iOS, this should be one of the valid devices returned by instruments with instruments -s devices. On Android this capability is currently ignored.
-                            :browserName => 'Chrome',                #  ‘Safari’ for iOS and ‘Chrome’, ‘Chromium’, or ‘Browser’ for Android
-                            :newCommandTimeout => '60',              # 60
-                            :autoLaunch => 'true',                   # true, false
-                            :language => ' ',                        # fr
-                            :locale => ' ',                          # fr_CA
-                            :orientation => ' ',
-                            :autoWebview => 'false',                 # true, false
-                            :noReset => 'false',                     # true, false
-                            :fullReset => 'false',                   # true, false
-                            :uuid => ENV['ADB_SERIAL'],
-            #  Android Only Capabilities
-                            :appActivity => ' ',
-                            :appPackage => ' ',
-                            :appWaitActivity => ' ',
-                            :appWaitPackage => ' ',
-                            :deviceReadyTimeout => ' ',
-                            :androidCoverage => ' ',
-                            :enablePerformanceLogging => ' ',
-                            :androidDeviceReadyTimeout => ' ',
-                            :androidDeviceSocket => ' ',
-                            :avd => ' ',
-                            :avdLaunchTimeout => ' ',
-                            :avdReadyTimeout => ' ',
-                            :avdArgs => ' ',
-                            :useKeystore => ' ',
-                            :keystorePath => ' ',
-                            :keystorePassword => ' ',
-                            :keyAlias => ' ',
-                            :keyPassword => ' ',
-                            :chromedriverExecutable => ' ',
-                            :autoWebviewTimeout => ' ',
-                            :intentAction => ' ',
-                            :intentCategory => ' ',
-                            :intentFlags => ' ',
-                            :optionalIntentArguments => ' ',
-                            :stopAppOnReset => ' ',
-                            :unicodeKeyboard => ' ',
-                            :resetKeyboard => ' ',
-                            :noSign => ' ',
-                            :ignoreUnimportantViews => ' ',
-            #iOS Only
-                            :calendarFormat => ' ',
-                            :bundleId => ' ',
-                            :udid => ' ',
-                            :launchTimeout => ' ',
-                            :locationServicesEnabled => ' ',
-                            :locationServicesAuthorized => ' ',
-                            :autoAcceptAlerts => ' ',
-                            :autoDismissAlerts => ' ',
-                            :nativeInstrumentsLib => ' ',
-                            :nativeWebTap => ' ',
-                            :safariInitialUrl => ' ',
-                            :safariAllowPopups => ' ',
-                            :safariIgnoreFraudWarning => ' ',
-                            :safariOpenLinksInBackground => ' ',
-                            :keepKeyChains => ' ',
-                            :localizableStringsDir => ' ',
-                            :processArguments => ' ',
-                            :interKeyDelay => ' ',
-                            :showIOSLog => ' ',
-                            :sendKeyStrategy => ' ',
-                            :screenshotWaitTimeout => ' ',
-                            :waitForAppScript => ' '
-                            }
-
-        Capybara::Selenium::Driver.new(app,
-                                         :browser => :remote,
-                                         :desired_capabilities => capabilities,
-                                         :url => "http://0.0.0.0:4723/wd/hub")
-        end
-
-
         Capybara.register_driver :appium do |app| # Native App
             capabilities = {
                             :automationName => 'Appium',
@@ -284,9 +205,8 @@ case ENV['APP']
                             }
         Capybara::Selenium::Driver.new(app,
                                          :desired_capabilities => capabilities)
-                                         #:url => "http://127.0.0.1:4723/wd/hub")
         end
 
     when "api"
-
+       #nothing now
   end

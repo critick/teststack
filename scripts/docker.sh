@@ -3,7 +3,7 @@
 
 WORKSPACE=$(pwd)
 CONTAINER_NAME="teststack"
-IMAGE_NAME="teststack"
+IMAGE_NAME="irfanah/teststack"
 
 
 function stop_container_if_already_running {
@@ -62,7 +62,7 @@ function run_cucumber_tests {
   echo "\n Running Bundler"
   docker exec ${CONTAINER_NAME} bundle install
   echo "Now running cucumber tests"
-  docker exec ${CONTAINER_NAME} bundle exec rake webapp
+  docker exec ${CONTAINER_NAME} bundle exec rake web
   exit $?
 }
 

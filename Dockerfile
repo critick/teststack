@@ -19,6 +19,8 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir -p /opt/testing
 WORKDIR /opt/testing
 
+EXPOSE 8808
 
 RUN gem install bundler
 RUN gem install nokogiri
+RUN yard server

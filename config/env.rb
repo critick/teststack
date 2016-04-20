@@ -82,9 +82,6 @@ require 'rest_helper'
 require 'sshkit/dsl'
 require 'remote'
 
-#For postgres connections
-#require 'pg'
-#require 'database_helper'
 
 
 case ENV['APP']
@@ -141,19 +138,7 @@ case ENV['APP']
            Capybara::Poltergeist::Driver.new(app, options)
         end
 
-        Capybara.register_driver :sauce do |app|
-                job_name = "Cucumber-Tests - #{Time.now.strftime '%Y-%m-%d %H:%M'}"
-                browser =  ENV['SAUCE_BROWSER']  || 'firefox'
-                version =  ENV['SAUCE_VERSION']  || '3.6'
-                platform = ENV['SAUCE_PLATFORM'] || 'WINDOWS'
-                duration = 7200
-                capabilities = { :browserName => browser, :version => version, :platform => platform, :name => job_name, 'max-duration' => duration }
-                puts "Running #{job_name} on SauceLabs with #{browser} #{version} on #{platform}"
-                Capybara::Selenium::Driver.new(app,
-                                               browser: :remote,
-                                               desired_capabilities: capabilities,
-                                               url: 'http://SAUCE_USERNAME:SAUCE_API_KEY@ondemand.saucelabs.com:80/wd/hub')
-         end
+
 
 
         #change here as per tests
@@ -303,22 +288,5 @@ case ENV['APP']
         end
 
     when "api"
-       #Capybara.configure do |config|
-       #          config.run_server = false
-       #          config.default_driver = :rack_test
-       #          config.app_host = ENV['SERVER']
-       # end
+
   end
-
-#require 'vcr'
-
-#VCR.configure do |c|
-#  c.cassette_library_dir = 'data/fixtures/vcr_cassettes'
-#  c.hook_into :webmock
-#  #VCR to handle requests made while a cassette is in use
-#  c.allow_http_connections_when_no_cassette = true
-#end
-
-#VCR.cucumber_tags do |t|
-#  t.tag '@vcr', :use_scenario_name => true
-#end

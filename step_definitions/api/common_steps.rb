@@ -1,18 +1,3 @@
-When(/^"([^"]*)" user request for questions$/) do |user_type|
-    #@api.questions.get_params(:owner => "me")
-    @api.questions.get_response
-end
-
-Then(/^questions responds with "([^"]*)"$/) do |status_code|
-    expect(@api.questions.response_status).to eql(status_code.to_i)
-end
-
-Given(/^"([^"]*)" user request for creating questions$/) do |arg1|
-      @api.questions.post_params(owner: "me" ,title: "sample")
-      @api.questions.get_response
-end
-
-
 Then(/^the response is a list containing (d+) (.*?)s?$/) do |count, type|
   data = MultiJson.load(last_response.body)
   validate_list(data, of: type, count: count)

@@ -1,8 +1,8 @@
 #!/bin/sh
 
 WORKSPACE=$(pwd)
-CONTAINER_NAME="testing-ci"
-IMAGE_NAME="testing-ci"
+CONTAINER_NAME="teststack"
+IMAGE_NAME="teststack"
 
 
 function stop_container_if_already_running {
@@ -14,7 +14,7 @@ function stop_container_if_already_running {
 function check_image_exist {
   echo -e "List of the available images \n"
   docker images
-  if docker images | grep -w "testing-ci"
+  if docker images | grep -w "teststack"
   then
   echo -e "\n*** Image already exists. We can run container... ***\n"
   else

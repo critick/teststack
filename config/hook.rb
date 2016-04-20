@@ -52,12 +52,6 @@ After do #|scenario|
 end
 
 
-
-Before('@smoke, @ci') do
-# This will only run before scenarios tagged
-# with @smoke OR @ci.
-end
-
 After('@smoke', '@ci') do |scenario|
 # This will only run after steps within scenarios tagged
 # with @smoke AND @ci.
@@ -69,7 +63,3 @@ After('@smoke', '@ci') do |scenario|
   # to tell Cucumber to quit after this scenario is done - if it failed.
   # Cucumber.wants_to_quit = true if s.failed?
 end
-
-#AfterConfiguration do |config|
-#  puts "Features dwell in #{config.base_dir}"
-#end

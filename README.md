@@ -1,8 +1,6 @@
 # Acceptance Test
 
-### _Build your app Anywhere, just Test them Here_
-
-[![Build Status](https://travis-ci.org/natritmeyer/site_prism.png)](https://travis-ci.org/Flutterbee/example-web)
+### _Build Anywhere, Test Here_
 
 This is Testing Framework based on BDD principles in Ruby ,you can use this for  
 
@@ -23,7 +21,7 @@ $cucumber DRIVER=<driver_name> APP=<app_type> SERVER=<server_name>
 (Eg :to run only API type tests for forum over dev server)
 
 ```bash  
-$cucumber DRIVER=chrome APP=web SERVER=https://dev.upgrad.com -p forumapi
+$cucumber DRIVER=chrome APP=web SERVER=https://dev.example.com -p forumapi
 ```
 
 DRIVER can be firefox, chrome, poltergeist(headless) ,appium [working on IE ]
@@ -128,7 +126,7 @@ We can run our cucumber scenario inside Docker containers. Assuming you have Doc
 $bundle exec rake docker
 ```
 
-This will build Docker image 'testing-ci' and run cucumber web scenarios inside container 'testing-ci'.
+This will build Docker image 'teststack' and run cucumber web scenarios inside container 'teststack'.
 
 
 ### Performance Testing - Gatling
@@ -188,7 +186,7 @@ $rvm list
 $rvm --default use 2.2.1
 ```
 
-If you have an old ruby/rvm, you can upgrade with
+If you have an old ruby/rvm, you can examplee with
 ```bash
 $rvm get head
 $rvm autolibs homebrew
@@ -212,7 +210,7 @@ $gem install bundler
 
 clone the repo and run bundle install ,all dependencies will be added
 ```bash
-$git clone git@bitbucket.org:upgrad_team/acceptance_test.git
+$git clone git@bitbucket.org:example_team/acceptance_test.git
 $cd acceptance_tests
 $bundle install
 ```
@@ -322,10 +320,9 @@ If you see config errors, try cleaning git.
 $git clean -dfx; git reset --hard
 ```
 ## Wiki
-https://bitbucket.org/upgrad_team/acceptance_test/wiki/browse/
+https://bitbucket.org/example_team/acceptance_test/wiki/browse/
 
 ## Repo Owner
-irfan.ahmad@upgrad.com
+irfan@critick.io
 
 ## Contributing
-https://bitbucket.org/upgrad_team/acceptance_test/src/9175caddd863761424232b644dc79fc23ee742bb/CONTRIBUTING.md

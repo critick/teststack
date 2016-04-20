@@ -1,19 +1,2 @@
-discuss:
-  csrftoken:    "winlbYr1WsvqDWGrW5ZZpfgZmZuNzF1d"
-  firstname:    "test"
-  lastname:     "user1"
-  email:        "user1@upgrad.com"
-  phoneNumber:  "999999999"
-  username:     "user1@upgrad.com"
-  password:     "password"
-  auth_token:   eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJzZXNzaW9uSURcIjpcIl9maTA2NzNobXJcIixcInVzZXJuYW1lXCI6XCJ1c2VyMUB1cGdyYWQuY29tXCJ9In0.XWD2x_rc7QBS5UDB92n7Gc99k3KNv15UeC0TzG30RPCZ7osQdYaUCUyxeI6YwktzdU_LK3qlwNTHZxUQ-36haw
-  sessionid:    _fi0673hmr
-  answer:       "this is default answer"
-  questionId:   "10"
-  content_type: "application/json"
-  comment:      "this is a testing comment"
-  answerId:     "1"
-
-web:
-  email:         "irfan.ahmad@upgrad.com"
-  password:      "password"
+vote:
+  choice: "bug"

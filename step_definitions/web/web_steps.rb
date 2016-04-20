@@ -16,9 +16,6 @@ end
 When(/^views "([^"]*)" details$/) do |course|
     @web.home.verify_login
     @web.home.view_course(course)
-    #@web.entrepreneurship.verify_title
-    #expect(@web.entrepreneurship).to be_displayed
-    #expect(@web.entrepreneurship).to have_text(arg1)
 end
 
 
@@ -27,14 +24,10 @@ When(/^views his "([^"]*)" details/) do |course|
     @web.home.view_my_applications
     expect(@web.applications).to be_displayed
     @web.applications.view_application(course)
-    #expect(@web.entrepreneurship).to be_displayed #change
 end
 
 
 When(/^Apply to "([^"]*)"$/) do |course|
-    @web.entrepreneurship.apply
-    sleep 5  # url redirection is not correct first time ,change after bugfix
-    #expect(@web.preview).to be_displayed
     @web.preview.verify_preview_details
 end
 

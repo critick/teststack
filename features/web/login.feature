@@ -1,55 +1,17 @@
-Feature:          Web - Existing Student
+Feature:          Web - Voting
                   As a user
-                  I  want to  login on upgrad website
-                  In order to view my application status
+                  I  want to use vote app
+                  In order to place my vote
 
 Background:
                   Given I am on home page
-
 @web1
-Scenario Outline: login to upgrad with explicit credentials
+Scenario Outline: vote as a single user
 
-                  When  I login in with <email> and <password>
-                  Then  I should see <status>
-
-Examples:        Authorized user and  Login
-
-                 | email                    | password   | status  |
-                 | "irfan.ahmad@upgrad.com" | "password" | "home"  |
-
-@web
-Scenario Outline: login to upgrad
-
-                 When  <user_type> user login to upgrad
-                 Then  I should see <status>
+                  When  I vote for <vote>
+                  Then  I should see <share>
 
 Examples:        Authorized user and  Login
 
-                | user_type   | status  |
-                | "existing"  | "home"  |
-
-
-
-Scenario Outline: preview the application
-
-                  When  <user_type> user login to upgrad
-                  And   views <course> details
-                  And   Apply to <course>
-                  Then  I should see <status>
-
-Examples:        students for different courses
-
-                  | user_type   | course              | status     |
-                  | "existing"  | "entrepreneurship"  | "preview"  |
-
-@web
-Scenario Outline: preview the application from my applications
-
-                  When  <user_type> user login to upgrad
-                  And   views his <course> details
-                  Then  I should see <status>
-
-Examples:        students for different courses
-
-                  | user_type   | course              | status     |
-                  | "existing"  | "entrepreneurship"  | "preview"  |
+                 | vote   | share  |
+                 | "bug"  | "100"  |

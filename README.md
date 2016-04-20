@@ -1,6 +1,10 @@
-# Acceptance Test
+# TestStack
 
 ### _Build Anywhere, Test Here_
+
+[![Build Status](https://travis-ci.org/irfanah/acceptance_test.svg?branch=master)](https://travis-ci.org/irfanah/acceptance_test) Climate](https://codeclimate.com/github/irfanah/TestStack/badges/gpa.svg)](https://codeclimate.com/github/irfanah/TestStack)
+[![Test Coverage](https://codeclimate.com/github/irfanah/TestStack/badges/coverage.svg)](https://codeclimate.com/github/irfanah/TestStack/coverage)
+[![Issue Count](https://codeclimate.com/github/irfanah/TestStack/badges/issue_count.svg)](https://codeclimate.com/github/irfanah/TestStack)
 
 This is Testing Framework based on BDD principles in Ruby ,you can use this for  
 
@@ -320,9 +324,10 @@ If you see config errors, try cleaning git.
 $git clean -dfx; git reset --hard
 ```
 ## Wiki
-https://bitbucket.org/example_team/acceptance_test/wiki/browse/
+https://github.com/irfanah/TestStack/wiki
 
 ## Repo Owner
-irfan@critick.io
+irfan ahmad, irfan@critick.io
 
 ## Contributing
+https://github.com/irfanah/TestStack/blob/master/CONTRIBUTING.md

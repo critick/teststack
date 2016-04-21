@@ -18,3 +18,12 @@ Then(/^login responds with "([^"]*)" ,"([^"]*)" ,"([^"]*)" and list of keys$/) d
         end
      end
 end
+
+
+When(/^I vote for "([^"]*)"$/) do |choice|
+   # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^app should respond with "([^"]*)"$/) do |status|
+   # Write code here that turns the phrase above into concrete actions
+end

@@ -37,20 +37,6 @@ module Pages
               @response_headers = response.headers
           end
 
-          def delete_response
-              response = make_delete_request @url, @params, @headers
-              @response_status = response.code
-              @response_data = JSON.parse(response.body, quirks_mode: true)
-              @response_headers = response.headers
-          end
-
-          def patch_response
-              response = make_patch_request @url, @params, @headers
-              @response_status = response.code
-              @response_data = JSON.parse(response.body, quirks_mode: true)
-              @response_headers = response.headers
-          end
-
       end
   end
 end

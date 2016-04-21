@@ -9,36 +9,6 @@ module Pages
      def home
          @pages[:home] ||= Pages::Web::HomePage.new
      end
-
-     def entrepreneurship
-         @pages[:entrepreneurship] ||= Pages::Web::Entrepreneurship.new
-     end
-
-     def applications
-         @pages[:applications] ||= Pages::Web::Applications.new
-     end
-
-     def preview
-         @pages[:preview] ||= Pages::Web::Preview.new
-     end
-
-    end
-  end
-
-  module WebApp
-    class Application
-      def initialize
-         @pages = {}
-      end
-
-      def login
-          @pages[:login] ||= Pages::WebApp::LoginPage.new
-      end
-
-      def dashboard
-          @pages[:dashboard] ||= Pages::WebApp::Dashboard.new
-      end
-
     end
   end
 
@@ -65,36 +35,12 @@ module Pages
           @apis = {}
        end
 
-       def signup
-          @apis[:signup] ||= Pages::API::Signup.new
+       def vote
+          @apis[:vote] ||= Pages::API::Vote.new
        end
 
-       def login
-          @apis[:login] ||= Pages::API::Login.new
-       end
-
-       def questions
-          @apis[:questions] ||= Pages::API::Questions.new
-       end
-
-       def answers
-          @apis[:answers] ||= Pages::API::Answers.new
-       end
-
-       def comments
-          @apis[:comments] ||= Pages::API::Comments.new
-       end
-
-       def voteanswer
-          @apis[:voteanswer] ||= Pages::API::VoteAnswer.new
-       end
-
-       def votequestion
-          @apis[:votequestion] ||= Pages::API::VoteQuestion.new
-       end
-
-       def bookmark
-          @apis[:bookmark] ||= Pages::API::Bookmark.new
+       def result
+          @apis[:result] ||= Pages::API::Result.new
        end
 
      end

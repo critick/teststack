@@ -6,11 +6,9 @@ require 'json'
 require 'yard'
 require 'fileutils'
 
-ADB_SERIAL = ""  #device name please
-
 Cucumber::Rake::Task.new(:api) do |t|
   t.cucumber_opts = " -x APP=api
-                      SERVER=192.168.99.100:5000
+                      SERVER=localhost:5000
                       features -p api "
 end
 
@@ -19,7 +17,7 @@ Cucumber::Rake::Task.new(:web) do |t|
   t.cucumber_opts = " DRIVER=poltergeist
                       APP=web
                       DEBUG=false
-                      SERVER=192.168.99.100:5000
+                      SERVER=localhost:5000
                       features -p web "
 end
 
@@ -32,6 +30,20 @@ Cucumber::Rake::Task.new(:android) do |t|
                       features -p android "
 end
 
+Cucumber::Rake::Task.new(:cloud) do |t|
+  t.cucumber_opts = " DRIVER=appium
+                      APP=native
+                      OS=android
+                      SERVER=http://google.com
+                      features -p cloud "
+end
+
+task :docker do
+  puts 'bringing containers up ....'
+  sh  'sh docker.sh'
+end
+
+ADB_SERIAL = ""  #device name
 
 #This Task will start appium and execute posapp tests
 task :app do
@@ -40,7 +52,6 @@ task :app do
 end
 
 task :stop_appium do
-
 end
 
 task :androidapp ,[:appname,:variant,:tag]  do |t, args|
@@ -108,14 +119,9 @@ end
 task parallel_cucumber: [:cleanup, :parallel_run, :rerun]
 
 
-task :docker do
-  puts 'preparing docker to run cucumber tests inside docker containers....'
-  sh  'sh ./scripts/docker.sh'
-end
-
 task :load do
   puts 'stating load test'
-  sh './load/gatling_local.sh'
+  sh 'sh ./load/gatling.sh'
 end
 
 

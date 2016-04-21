@@ -46,6 +46,14 @@ services:
     networks:
       - back-tier
 
+  teststack:
+    build: .
+    volumes:
+      - /opt/testing
+    networks:
+      - front-tier
+      - back-tier
+
 volumes:
   db-data:
 

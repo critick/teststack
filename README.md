@@ -136,22 +136,21 @@ $ yard server
 ```
 
 ### Setup with Docker
-We can run our cucumber scenario inside Docker containers. Assuming you have Docker installed.
-
+after installing docker ,you can run any test inside docker containers
 ```
-$ bundle exec rake docker
+$ rake docker["api"]    #for api tests
+$ rake docker["web"]    #for web tests
 ```
 
 This will build Docker image 'teststack' and run cucumber web scenarios inside container 'teststack'.
 
 
 ### Performance Testing - Gatling
-You can use Gatling setup to execute load tests against your endpoints. Simply change 'load/user-files/simulation/SampleLoadTEST.scala' file and puts your URL to Test as base URL.
+You can use Gatling setup to execute load tests against your endpoints.
 ```
-$ cd load
-$ sh gatling_local.sh
+$ rake load
 ```
-This will run load tests against your url. You are free to record new simulations. Once finished there will be link to HTML report at the end.
+
 
 There is CI integration to plug it with jenkins.
 

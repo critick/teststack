@@ -6,8 +6,8 @@ module Pages
          @pages = {}
       end
 
-     def home
-         @pages[:home] ||= Pages::Web::HomePage.new
+     def vote
+         @pages[:vote] ||= Pages::Web::Vote.new
      end
     end
   end

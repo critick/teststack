@@ -28,7 +28,6 @@ Before do |scenario|
             page.driver.reset!
         end
         @web    ||= Pages::Web::Application.new
-        @webapp ||= Pages::WebApp::Application.new
         when "native"
         @app ||= Pages::App::Application.new
         when "api"

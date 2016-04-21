@@ -5,12 +5,12 @@ Feature:          API - voting
 
 @web
 Scenario Outline: vote as a single user
-
-                  When  I vote for <choice>
-                  Then  <choice> should have <share>
+                  Given I am on voting page
+                  When  I see <title>
+                  Then  I vote for <choice>
 
 Examples:        voted for different option to get success response
 
-                 | choice     | share   |
-                 | "bug"      | "100"   |
-                 | "feature"  | "100"   |
+                 | choice     | title              |
+                 | "bug"      | "Bug vs Feature!"   |
+                 | "feature"  | "Bug vs Feature!"   |

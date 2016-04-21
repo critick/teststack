@@ -1,5 +1,6 @@
 #!/bin/sh
 
+TASK=$1
 WORKSPACE=$(pwd)
 CONTAINER_NAME="teststack"
 IMAGE_NAME="irfanah/teststack"
@@ -61,7 +62,7 @@ function run_cucumber_tests {
   echo "\n Running Bundler"
   docker exec ${CONTAINER_NAME} bundle install
   echo "Now running cucumber tests"
-  docker exec ${CONTAINER_NAME} bundle exec rake api
+  docker exec ${CONTAINER_NAME} bundle exec rake ${TASK}
   exit $?
 }
 

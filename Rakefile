@@ -17,7 +17,7 @@ Cucumber::Rake::Task.new(:web) do |t|
   t.cucumber_opts = " DRIVER=poltergeist
                       APP=web
                       DEBUG=false
-                      SERVER=localhost:5000
+                      SERVER=http://192.168.99.100:5000/
                       features -p web "
 end
 
@@ -26,7 +26,7 @@ Cucumber::Rake::Task.new(:android) do |t|
   t.cucumber_opts = " DRIVER=appium
                       APP=native
                       OS=android
-                      SERVER=192.168.99.100:5000
+                      SERVER=http://192.168.99.100:5000
                       features -p android "
 end
 
@@ -38,9 +38,12 @@ Cucumber::Rake::Task.new(:cloud) do |t|
                       features -p cloud "
 end
 
-task :docker do
+#Run rake docker["web"] for web
+
+task :docker, :task do |t, args|
+  TASK = args[:task] ||"api"
   puts 'bringing containers up ....'
-  sh  'sh docker.sh'
+  sh  "sh docker.sh #{TASK}"
 end
 
 ADB_SERIAL = ""  #device name

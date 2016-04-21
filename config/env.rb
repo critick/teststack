@@ -138,20 +138,6 @@ case ENV['APP']
            Capybara::Poltergeist::Driver.new(app, options)
         end
 
-        Capybara.register_driver :browserstack do |app|
-                 job_name = "teststack running at #{Time.now}"
-                 browser =  ENV['BS_BROWSER']  || 'Safari'
-                 version =  ENV['BS_VERSION']  || '8'
-                 platform = ENV['BS_PLATFORM'] || 'MAC'
-                 capabilities = {:browserName => browser, :version => version, :platform => platform, :name => job_name}
-                 Capybara::Selenium::Driver.new(app,
-                                                :browser => :remote,
-                                                :desired_capabilities => capabilities,
-                                                :url => "http://BS_USERNAME:BS_KEY@hub.browserstack.com/wd/hub"
-                  )
-          end
-
-
         #change here as per tests
         Capybara.configure do |config|
           case ENV['DRIVER']

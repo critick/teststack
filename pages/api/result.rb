@@ -5,7 +5,7 @@ module Pages
       class Result < BaseAPI
 
         def initialize
-            @url      =  "http://localhost:5001"
+            @url      =  "http://192.168.99.100:5001/"
             @headers  =  {"content_type": "application/x-www-form-urlencoded"}
             super(url:@url,headers: @headers)
         end

@@ -5,7 +5,7 @@ module RestHelper
 	def make_get_request(url, params, headers)
 			begin
 			RestClient::Request.execute(method:  :get,
-																	url:     ENV['SERVER']+url,
+																	url:     url,
 																	timeout: 10,
 																	headers: headers,
 																	params:  params)
@@ -17,9 +17,9 @@ module RestHelper
 	def make_post_request(url, params, headers)
 			begin
 			RestClient::Request.execute(method:       :post,
-																	url:          ENV['SERVER']+url,
+																	url:          url,
 																	timeout:      10,
-																	payload:      params.to_json,
+																	payload:      params,
 																	headers:      headers)
 			rescue => e
 			e.response

@@ -323,6 +323,47 @@ If you see config errors, try cleaning git.
 ```
 $ git clean -dfx; git reset --hard
 ```
+### Directory structure
+
+```
+├── config
+│   ├── cucumber.yml
+│   ├── env.rb
+│   ├── mobile
+│   │   ├── android
+│   │   └── ios
+│   └── hook.rb
+├── data
+│   └── fixtures
+├── helpers
+├── features
+│   ├── api
+│   └── app
+│   └── web
+├── pages
+│   ├── api
+│   ├── app
+│   ├── web
+│   └── application.rb
+├── step_definitions
+│   ├── api
+│   ├── app
+│   └── web
+├── load
+├── lib
+│   ├── reporting
+│   ├── viewer
+├── scripts
+│   ├── docker
+│   │   ├── Dockerfile
+│   │   └── docker.sh
+│   └── mobile
+│       └── run_appium.sh
+├── docker-compose.yml
+├── Rakefile
+└── wiki
+```
+
 ## Wiki
 https://github.com/irfanah/TestStack/wiki
 

@@ -43,7 +43,7 @@ end
 task :docker, :task do |t, args|
   TASK = args[:task] ||"api"
   puts 'bringing containers up ....'
-  sh  "sh docker.sh #{TASK}"
+  sh  "sh ./scripts/docker.sh #{TASK}"
 end
 
 ADB_SERIAL = ""  #device name

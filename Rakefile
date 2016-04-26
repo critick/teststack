@@ -8,7 +8,7 @@ require 'fileutils'
 
 Cucumber::Rake::Task.new(:api) do |t|
   t.cucumber_opts = " -x APP=api
-                      SERVER=localhost:5000
+                      SERVER=http://google.com
                       features -p api "
 end
 

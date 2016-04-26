@@ -9,8 +9,8 @@ gemfile:
 before_install:
   - gem install bundler
 
-script:
-  - bundle exec rake api
+#script:
+#  - bundle exec rake api
 
 branches:
   only:

@@ -4,6 +4,7 @@
 
 [![Code Climate](https://codeclimate.com/github/irfanah/TestStack/badges/gpa.svg)](https://codeclimate.com/github/irfanah/TestStack)
 [![Test Coverage](https://codeclimate.com/github/irfanah/TestStack/badges/coverage.svg)](https://codeclimate.com/github/irfanah/TestStack/coverage)
+[![Build Status](https://travis-ci.org/irfanah/TestStack.svg?branch=demo)](https://travis-ci.org/irfanah/TestStack)
 
 This is Testing Framework based on BDD principles in Ruby ,you can use this for  
 

@@ -1,0 +1,17 @@
+language: ruby
+
+rvm:
+  - 2.2.0
+
+gemfile:
+  - Gemfile
+
+before_install:
+  - gem install bundler
+
+script:
+  - bundle exec rake api
+
+branches:
+  only:
+    - demo

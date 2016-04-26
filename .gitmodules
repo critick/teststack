@@ -1,6 +1,6 @@
 [submodule "lib/reporting"]
 	path = lib/reporting
-	url = git@github.com:irfanah/cucumber-sandwich.git
+	url = https://github.com/irfanah/cucumber-sandwich
 	[submodule "wiki"]
 		path = wiki
-		url = git@github.com:irfanah/TestStack.wiki.git
+		url = https://github.com/irfanah/TestStack/wiki

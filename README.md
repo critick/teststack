@@ -2,8 +2,8 @@
 
 ### _Build Anywhere, Test Here_
 
-[![Code Climate](https://codeclimate.com/github/irfanah/TestStack/badges/gpa.svg)](https://codeclimate.com/github/irfanah/TestStack)
-[![Test Coverage](https://codeclimate.com/github/irfanah/TestStack/badges/coverage.svg)](https://codeclimate.com/github/irfanah/TestStack/coverage)
+[![Code Climate](https://codeclimate.com/github/critickio/teststack/badges/gpa.svg)](https://codeclimate.com/github/critickio/teststack)
+
 [![Build Status](https://travis-ci.org/irfanah/TestStack.svg?branch=demo)](https://travis-ci.org/irfanah/TestStack)
 
 This is Testing Framework based on BDD principles in Ruby ,you can use this for  

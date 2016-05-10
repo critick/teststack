@@ -2,9 +2,11 @@
   config_requires        = "--require config --require step_definitions/api"
   web_requires           = "--require config --require step_definitions/web"
   api_requires           = "--require config --require step_definitions/api"
+  app_requires           = "--require config --require step_definitions/app"
 %>
 
 
 default    : <%= config_requires %> --format json -o cucumber.json --format pretty
 web        : <%= web_requires %> --format json -o cucumber.json --format pretty --format html --out report.html  --tags @web
 api        : <%= api_requires %> --format json -o cucumber.json --format pretty --format html --out report.html --tags @api
+app        : <%= app_requires %> --format json -o cucumber.json --format pretty --format html --out report.html --tags @app

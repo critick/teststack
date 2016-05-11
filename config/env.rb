@@ -147,8 +147,40 @@ case ENV['APP']
                  Capybara::Selenium::Driver.new(app,
                                                 :browser => :remote,
                                                 :desired_capabilities => capabilities,
-                                                :url => "http://BS_USERNAME:BS_KEY@hub.browserstack.com/wd/hub"
-                  )
+                                                :url => "http://BS_USERNAME:BS_KEY@hub.browserstack.com/wd/hub")
+          end
+
+        Capybara.register_driver :sauce do |app|
+                    job_name = "Cucumber-Tests - #{Time.now.strftime '%Y-%m-%d %H:%M'}"
+                    browser =  ENV['SAUCE_BROWSER']  || 'firefox'
+                    version =  ENV['SAUCE_VERSION']  || '3.6'
+                    platform = ENV['SAUCE_PLATFORM'] || 'WINDOWS'
+                    duration = 7200
+                    capabilities = { :browserName => browser, :version => version, :platform => platform, :name => job_name, 'max-duration' => duration }
+                    puts "Running #{job_name} on SauceLabs with #{browser} #{version} on #{platform}"
+                    Capybara::Selenium::Driver.new(app,
+                                                   browser: :remote,
+                                                   desired_capabilities: capabilities,
+                                                   url: 'http://SAUCE_USERNAME:SAUCE_API_KEY@ondemand.saucelabs.com:80/wd/hub')
+        end
+
+        Capybara.register_driver :testingbot do |app|
+                      platform = ENV['TB_STACK'] || 'osx_firefox'
+                      json = JSON.load(open(File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'browsers.json'))))
+                      config = json[platform]
+                      unless config
+                      puts "wrong '#{platform}'"
+                      return
+                      end
+
+                      # Add default config
+                      config['name'] = "#{config['os']} #{config['os_version']} - #{Time.now.strftime '%Y-%m-%d %H:%M'}"
+                      config['acceptSslCert'] = false
+
+                      Capybara::Selenium::Driver.new(app,
+                                                   browser: :remote,
+                                                   desired_capabilities: config,
+                                                   url: 'http://KEY:SECRET@hub.testingbot.com/wd/hub')
           end
 
         #change here as per tests

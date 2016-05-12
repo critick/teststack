@@ -34,4 +34,28 @@ module RestHelper
 			end
 	end
 
+	def make_delete_request(url, params, headers)
+			begin
+			RestClient::Request.execute(method:       :delete,
+																	url:          ENV['SERVER']+url,
+																	timeout:      10,
+																	payload:      params.to_json,
+																	headers:      headers)
+			rescue => e
+			e.response
+		  end
+	end
+
+	def make_patch_request(url, params, headers)
+			begin
+			RestClient::Request.execute(method:       :patch,
+																	url:          ENV['SERVER']+url,
+																	timeout:      10,
+																	payload:      params.to_json,
+																	headers:      headers)
+			rescue => e
+			e.response
+		  end
+	end
+
 end

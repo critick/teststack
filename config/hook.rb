@@ -27,7 +27,7 @@ Before do |scenario|
             Capybara.reset_sessions!
             page.driver.reset!
         end
-        @web    ||= Pages::Web::Application.new
+        @web ||= Pages::Web::Application.new
         when "native"
         @app ||= Pages::App::Application.new
         when "api"

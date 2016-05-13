@@ -14,7 +14,7 @@ module Remote
    #SSHKit.config.output_verbosity = :debug
 
   def self.get_token_from_number(number)
-      on 'ubuntu@api-upgrad.com' do
+      on 'ubuntu@server.com' do
         as :ubuntu do
             @@message = DataBaseHelper.get_query("SELECT token from table where number='#{number.to_i}' limit 1","post_token")
         end
@@ -23,7 +23,7 @@ module Remote
   end
 
   def self.run(command)
-    on 'ubuntu@api-upgrad.com' do
+    on 'ubuntu@server.com' do
       as :ubuntu do
           @@message = execute(command)
       end

@@ -9,7 +9,7 @@ class SeleniumWrapper
     profile["network.proxy.type"]          = 1
     profile["network.proxy.http"]          = "127.0.0.1"
     profile["network.proxy.http_port"]     = 9999
-    profile["network.proxy.no_proxies_on"] = "localhost, 127.0.0.1, *upgrad.com"
+    profile["network.proxy.no_proxies_on"] = "localhost, 127.0.0.1, *critick.io"
     @selenium = Selenium::WebDriver.for(browser, :profile => profile)
 
     # Specify the driver path for chromedriver

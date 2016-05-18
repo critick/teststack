@@ -1,3 +1,6 @@
 [submodule "lib/reporting"]
 	path = lib/reporting
 	url = https://github.com/irfanah/cucumber-sandwich
+ [submodule "lib/live"]
+	path = lib/live
+	url = https://github.com/irfanah/cukedoctor.git

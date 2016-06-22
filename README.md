@@ -64,17 +64,6 @@ $ rake api
 $ rake web
 ```
 
-##Test cases documentation
-
-```
-$ cucumber -d --format html --out report.html --format pretty
-```
-
-## Code documentation with Yard Server
-```
-$ yard server
-```
-
 ### Setup with Docker
 after installing docker ,you can run any test inside docker containers
 ```
@@ -84,20 +73,7 @@ $ rake docker["web"]      #for web tests execution on headless browser
 $ rake docker["webapp"]   #for web tests execution on selenium grid
 ```
 
-### Integrations Supported in Library
-
-* Test Runner           : Cucumber
-* Test Implementation   : Ruby
-* API Testing           : Rest-Client
-* Web Testing           : Capybara ,Selenium-Webdriver ,PhantomJs ,Selenium-Grid
-* Mobile App            : Appium (Android and iOS)
-* Mobile Web            : Appium (Android Browser ,Chrome,iOS Safari)  
-* Setup, Deployment     : Docker   
-* Cloud Testing Infra   : SauceLab ,BrowserStack
-* Code documentation    : Yard
-
-
-##Pre-requisite and How to Setup
+##Setup without Docker
 
 1.prepare system with package manager
 

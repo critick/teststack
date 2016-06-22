@@ -118,7 +118,12 @@ case ENV['APP']
           profile = Selenium::WebDriver::Firefox::Profile.new
           profile['browser.cache.disk.enable'] = false
           profile['browser.cache.memory.enable'] = false
-          Capybara::Selenium::Driver.new(app, browser: :firefox, profile: profile)
+          #Capybara::Selenium::Driver.new(app, browser: :firefox, profile: profile)
+          capabilities = Selenium::WebDriver::Remote::Capabilities.firefox
+          Capybara::Selenium::Driver.new(app,
+                                          :browser => :remote,
+                                          :desired_capabilities => capabilities,
+                                          :url => "http://192.168.99.100:4444/wd/hub")
         end
 
         #ShowMeTheCookies.register_adapter(:custom_selenium_a, ShowMeTheCookies::Selenium)
@@ -196,6 +201,9 @@ case ENV['APP']
                     config.page.driver.browser.manage.window.maximize
                when "appium"
                     config.default_driver = :appium
+              when "selenium"
+                    config.default_driver    = :selenium
+                    config.javascript_driver = :selenium
                else
                     config.default_driver = :chrome
           end

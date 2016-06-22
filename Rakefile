@@ -14,7 +14,7 @@ end
 
 
 Cucumber::Rake::Task.new(:web) do |t|
-  t.cucumber_opts = " DRIVER=poltergeist
+  t.cucumber_opts = " DRIVER=selenium
                       APP=web
                       DEBUG=false
                       SERVER=http://192.168.99.100:5000/
@@ -43,7 +43,7 @@ end
 task :docker, :task do |t, args|
   TASK = args[:task] ||"api"
   puts 'bringing containers up ....'
-  sh  "sh ./scripts/docker.sh #{TASK}"
+  sh  "sh ./scripts/docker/docker.sh #{TASK}"
 end
 
 ADB_SERIAL = ""  #device name

@@ -237,8 +237,6 @@ case ENV['APP']
                             :app => '/Users/irfan/Desktop/app1.apk',
                             :platformName => 'Android',
                             :deviceName => 'Samsung'
-                            #:newCommandTimeout => '60',
-                            #:uuid => ENV['ADB_SERIAL']
                             }
         Capybara::Selenium::Driver.new(app,
                                          :desired_capabilities => capabilities)

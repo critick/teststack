@@ -1,4 +1,0 @@
-- tags.each do |tag|
-  %span.label.notice
-    %a{:href => "/projects/#{current_project.name}/search?q=#{tag["name"]}", :class => "tag-#{tag["name"].delete('@')}"}
-      = tag["name"]

@@ -7,9 +7,8 @@
 
 This is Testing Framework based on BDD principles in Ruby ,you can use this for  
 
-* design test cases with cucumber
 * automate the tests with step definitions in ruby
-* executable-specifications and live documentation of featurres
+* executable-specifications and live documentation of features
 * execute tests suite for products Web , Mobile and API's interfaces
 
 
@@ -65,65 +64,6 @@ $ rake api
 $ rake web
 ```
 
-3.to run api tests
-```
-$ rake android
-```
-
-4.to run load tests
-```
-$ rake load
-```
-
-
-### Generate Test Documents online with viewer
-
-To deploy viewer locally
-
-1.make sure mongo db is installed and running
-```
-$  brew install mongodb
-```
-
-start mongodb by running ,
-```
-$ mongod
-```
-
-2.start the sinatra server
-
-```
-$ rake serve_viewer
-```
-3.push features into database
-```
-$ rake push_viewer
-```
-viewer will run at  as localhost:4567/projects/tests
-
-4.push features into databasex
-```
-$ rake drop_viewer
-```
-To deploy viewer sinatra app on server
-
-1.start unicorn server as a deamon ,it will start on port 8080
-
-```
-$ unicorn -c unicorn.rb -D
-```
-2.push features into database
-```
-$ rake push_viewer 8080
-```
-
-3.push features into database
-```
-$ rake drop_viewer 8080
-```
-
-viewer will run at  as http://<server-name>/projects/tests
-
 ##Test cases documentation
 
 ```
@@ -138,34 +78,22 @@ $ yard server
 ### Setup with Docker
 after installing docker ,you can run any test inside docker containers
 ```
-$ rake docker["api"]    #for api tests
-$ rake docker["web"]    #for web tests
+$ docker-compose up       #for starting example-web app  
+$ rake docker["api"]      #for api tests
+$ rake docker["web"]      #for web tests execution on headless browser
+$ rake docker["webapp"]   #for web tests execution on selenium grid
 ```
-
-This will build Docker image 'teststack' and run cucumber web scenarios inside container 'teststack'.
-
-
-### Performance Testing - Gatling
-You can use Gatling setup to execute load tests against your endpoints.
-```
-$ rake load
-```
-
-
-There is CI integration to plug it with jenkins.
 
 ### Integrations Supported in Library
 
 * Test Runner           : Cucumber
-* Test Implemenataion   : Ruby
+* Test Implementation   : Ruby
 * API Testing           : Rest-Client
-* Web Testing           : Capybara ,Selenium Webdriver [chrome,firefox,poltergeist(headless)]
+* Web Testing           : Capybara ,Selenium-Webdriver ,PhantomJs ,Selenium-Grid
 * Mobile App            : Appium (Android and iOS)
 * Mobile Web            : Appium (Android Browser ,Chrome,iOS Safari)  
-* Performance Testing   : Gatling
 * Setup, Deployment     : Docker   
-* Cloud Testing Infra   : SauceLab
-* Feature documentation : sinatra app [viewer]
+* Cloud Testing Infra   : SauceLab ,BrowserStack
 * Code documentation    : Yard
 
 
@@ -201,7 +129,7 @@ $ rvm list
 $ rvm --default use 2.2.1
 ```
 
-If you have an old ruby/rvm, you can examplee with
+If you have an old ruby/rvm, you can example with
 ```
 $ rvm get head
 $ rvm autolibs homebrew
@@ -297,7 +225,6 @@ http://www.rubydoc.info/github/cucumber/cucumber-ruby/
 * Rest-Client
 http://www.rubydoc.info/github/rest-client/rest-client/master
 * Docker https://docs.docker.com/engine/quickstart/
-* Gatling http://gatling.io/#/docs
 
 
 
@@ -349,7 +276,6 @@ $ git clean -dfx; git reset --hard
 │   ├── api
 │   ├── app
 │   └── web
-├── load
 ├── lib
 │   ├── reporting
 │   ├── viewer

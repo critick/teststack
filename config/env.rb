@@ -11,9 +11,8 @@ $LOAD_PATH.unshift(helpers_dir)
 $LOAD_PATH.unshift(fixtures_dir)
 
 require 'active_support/all'
-require 'rest_helper'
+require 'rest'
 
-require 'selenium_wrapper'
 #require 'test_data'
 require 'require_all'
 
@@ -61,10 +60,20 @@ require 'capybara/dsl'
 require 'pry'
 
 #Load these direcrories path in memory
-$LOAD_PATH << './pages'
 $LOAD_PATH << './lib'
 $LOAD_PATH << './data/fixtures'
 $LOAD_PATH << './helpers'
+$LOAD_PATH << './pages'
+
+##For the common handling api's ,load all helpers
+require_all 'helpers'
+#for Adding Library files during execution
+require 'rest'
+#For SSHConnectionsrequire 'sshkit'
+require 'sshkit/dsl'
+require 'remote'
+require 'headless'
+
 
 #For the Page Objects configuration ,load all pages
 require 'site_prism'
@@ -72,15 +81,6 @@ require_all 'pages'
 
 require 'test_data'
 
-
-
-##For the common handling api's ,load all helpers
-require_all 'helpers'
-#for Adding Library files during execution
-require 'rest_helper'
-#For SSHConnectionsrequire 'sshkit'
-require 'sshkit/dsl'
-require 'remote'
 
 
 
@@ -111,7 +111,11 @@ case ENV['APP']
         end
 
         Capybara.register_driver :chrome do |app|
-          Capybara::Selenium::Driver.new(app, :browser => :chrome)
+          capabilities = Selenium::WebDriver::Remote::Capabilities.chrome
+          Capybara::Selenium::Driver.new(app,
+                                          :browser => :chrome,
+                                          :desired_capabilities => capabilities,
+                                          :url => "http://192.168.99.100:4444/wd/hub")
         end
 
         Capybara.register_driver :selenium do |app|

@@ -51,7 +51,6 @@ services:
     ports:
        - "4444:4444"
 
-
   node-chrome-debug:
     image: selenium/node-chrome-debug:2.52.0
     environment:

@@ -39,7 +39,7 @@ module Pages
               if is_null(response.body)
                   puts "response body is a null string"
               else
-                 @response_data = JSON.parse(response.body, quirks_mode: true)
+                 @response_data = response.body
               end
           end
 

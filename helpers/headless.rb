@@ -1,11 +1,6 @@
-#To Create a Wrapper and add Common methods to be used frequently with Poltergeist
+require 'capybara/poltergeist'
 
-#Eg: 1.capture network traffic
-#    2.errors capture
-#    3.async handling
-#    4.performance stats
-
-class PoltergeistWrapper
+module Headless
 
   Capybara.register_driver :poltergeist do |app|
 
@@ -30,5 +25,6 @@ class PoltergeistWrapper
          end
       end
   end
+
 
 end

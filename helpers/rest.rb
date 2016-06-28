@@ -58,4 +58,12 @@ module RestHelper
 		  end
 	end
 
+	def log_network_calls()
+			 page.driver.network_traffic.each do |request|
+				 request.response_parts.uniq(&:url).each do |response|
+						puts "\n url #{response.url}: \n status #{response.status}"
+				 end
+			end
+	end
+
 end

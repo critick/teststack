@@ -50,6 +50,11 @@ After do #|scenario|
       end
 end
 
+AfterStep do |scenario|
+         if  Capybara.current_session.driver.is_a?(Capybara::Poltergeist::Driver)
+             log_network_calls
+         end
+end
 
 After('@smoke', '@ci') do |scenario|
 # This will only run after steps within scenarios tagged

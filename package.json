@@ -1,9 +1,0 @@
-{
-  "version": "0.0.0",
-  "description": "acceptance_tests nodeJS modules",
-  "dependencies": {
-    "webdriverjs" : "*",
-    "appium": "*"
-  },
-  "author": "Irfan Ahmad"
-}

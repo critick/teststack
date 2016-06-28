@@ -6,21 +6,7 @@ class SeleniumWrapper
   def initialize(browser = :firefox, mobile = false)
 
     profile = Selenium::WebDriver::Firefox::Profile.new
-    profile["network.proxy.type"]          = 1
-    profile["network.proxy.http"]          = "127.0.0.1"
-    profile["network.proxy.http_port"]     = 9999
-    profile["network.proxy.no_proxies_on"] = "localhost, 127.0.0.1, *critick.io"
     @selenium = Selenium::WebDriver.for(browser, :profile => profile)
-
-    # Specify the driver path for chromedriver
-    #chromedriver_path = File.join(File.absolute_path('/', File.dirname(__FILE__)),"usr/local/bin/","chromedriver")
-    #Selenium::WebDriver::Chrome.driver_path = chromedriver_path
-    #prefs  = Selenium::WebDriver::Chrome::Profile.new
-    #prefs = { :download => {  :prompt_for_download => false,
-    #                          :default_directory => "/User/irfan/Downloads/Chrome"
-    #                        }
-    #        }
-    #@selenium = Selenium::WebDriver.for (browser, :prefs => prefs)
   end
 
   def quit

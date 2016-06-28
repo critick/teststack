@@ -9,6 +9,7 @@ module Pages
      def vote
          @pages[:vote] ||= Pages::Web::Vote.new
      end
+
     end
   end
 

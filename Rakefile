@@ -21,6 +21,14 @@ Cucumber::Rake::Task.new(:web) do |t|
 end
 
 Cucumber::Rake::Task.new(:webapp) do |t|
+  t.cucumber_opts = " DRIVER=chrome
+                      APP=web
+                      DEBUG=false
+                      SERVER=http://192.168.99.100:5000/
+                      features -p web "
+end
+
+Cucumber::Rake::Task.new(:webapps) do |t|
   t.cucumber_opts = " DRIVER=selenium
                       APP=web
                       DEBUG=false

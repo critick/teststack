@@ -10,6 +10,7 @@ before_install:
   - gem install bundler
 
 script:
+  - docker-compose up -d 
   - bundle exec rake api
 
 branches:

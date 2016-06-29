@@ -14,7 +14,7 @@ before_install:
 
 script:
   - docker-compose up
-  - #bundle exec rake docker["api"]
+  #bundle exec rake docker["api"]
 
 branches:
   only:

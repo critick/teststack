@@ -51,9 +51,12 @@ After do #|scenario|
 end
 
 AfterStep do |scenario|
+  case ENV['APP']
+  when "web"
          if  Capybara.current_session.driver.is_a?(Capybara::Poltergeist::Driver)
              log_network_calls
          end
+  end         
 end
 
 After('@smoke', '@ci') do |scenario|

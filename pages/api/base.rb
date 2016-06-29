@@ -34,7 +34,6 @@ module Pages
           end
 
           def post_response
-              binding.pry
               response = make_post_request @url, @params, @headers
               @response_status = response.code
               if is_null(response.body)

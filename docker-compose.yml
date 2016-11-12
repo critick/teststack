@@ -47,12 +47,12 @@ services:
       - back-tier
 
   hub:
-    image: selenium/hub:2.52.0
+    image: selenium/hub:3.0.1-aluminum
     ports:
        - "4444:4444"
 
-  node-chrome-debug:
-    image: selenium/node-chrome-debug:2.52.0
+  chrome:
+    image: selenium/node-chrome-debug:2.53.0
     environment:
     - HUB_PORT_4444_TCP_ADDR=hub
     - HUB_PORT_4444_TCP_PORT=4444
@@ -61,8 +61,8 @@ services:
     links:
       - hub
 
-  node-firefox-debug:
-    image: selenium/node-firefox-debug:2.52.0
+  firefox:
+    image: selenium/node-firefox-debug:2.53.0
     environment:
     - HUB_PORT_4444_TCP_ADDR=hub
     - HUB_PORT_4444_TCP_PORT=4444

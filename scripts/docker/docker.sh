@@ -3,7 +3,7 @@
 TASK=$1
 WORKSPACE=$(pwd)
 CONTAINER_NAME="teststack"
-IMAGE_NAME="irfanah/teststack"
+IMAGE_NAME="irfanah/teststack:2.0"
 
 
 function stop_container_if_already_running {

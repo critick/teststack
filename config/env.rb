@@ -24,15 +24,6 @@ require 'rest-client'
 require 'test/unit/assertions'
 World(Test::Unit::Assertions)
 
-#Play with cookies in your tests
-require 'show_me_the_cookies'
-World(ShowMeTheCookies)
-
-require 'wannabe_bool'
-
-# Cucumber with FactoryGirl
-require 'factory_girl'
-World(FactoryGirl::Syntax::Methods)
 
 #For centralised logging
 require 'logger'
@@ -45,8 +36,7 @@ require 'rack/test'
 World(Rack::Test::Methods)
 
 
-#For parallel execution
-require 'parallel_tests'
+
 #For Capybara and setting the default browser
 require "capybara/cucumber"
 
@@ -130,7 +120,6 @@ case ENV['APP']
                                           :url => "http://192.168.99.100:4444/wd/hub")
         end
 
-        #ShowMeTheCookies.register_adapter(:custom_selenium_a, ShowMeTheCookies::Selenium)
 
         Capybara.register_driver :poltergeist do |app|
             options = { :js_errors => ENV['DEBUG'].to_b,

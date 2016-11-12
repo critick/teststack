@@ -12,18 +12,14 @@ $LOAD_PATH.unshift(fixtures_dir)
 
 require 'active_support/all'
 require 'rest'
-
-#require 'test_data'
 require 'require_all'
-
 require 'appium_lib'
-#require 'appium_console'
 require 'rest-client'
+require 'wannabe_bool'
 
 #Use Test::Unit assertions instead of Rsepec shoulds
 require 'test/unit/assertions'
 World(Test::Unit::Assertions)
-
 
 #For centralised logging
 require 'logger'
@@ -35,16 +31,12 @@ require 'rack'
 require 'rack/test'
 World(Rack::Test::Methods)
 
-
-
 #For Capybara and setting the default browser
 require "capybara/cucumber"
-
 require 'capybara/poltergeist'
+require 'selenium/webdriver'
 require 'selenium-webdriver'
 require 'capybara/dsl'
-
-
 
 #For debugging load the Pry gem
 require 'pry'
@@ -59,16 +51,12 @@ $LOAD_PATH << './pages'
 require_all 'helpers'
 #for Adding Library files during execution
 require 'rest'
-#For SSHConnectionsrequire 'sshkit'
-require 'sshkit/dsl'
-require 'remote'
 require 'headless'
 
 
 #For the Page Objects configuration ,load all pages
 require 'site_prism'
 require_all 'pages'
-
 require 'test_data'
 
 
@@ -96,8 +84,8 @@ case ENV['APP']
 
    when "web"
         #Configuration of Capybara for web
-        Capybara.register_driver :firefox do |app|
-          Capybara::Selenium::Driver.new(app, :browser => :firefox)
+        Capybara.register_driver :selenium do |app|
+          Capybara::Selenium::Driver.new(app, :browser => :chrome)
         end
 
         Capybara.register_driver :chrome do |app|
@@ -108,11 +96,10 @@ case ENV['APP']
                                           :url => "http://192.168.99.100:4444/wd/hub")
         end
 
-        Capybara.register_driver :selenium do |app|
+        Capybara.register_driver :firefox do |app|
           profile = Selenium::WebDriver::Firefox::Profile.new
           profile['browser.cache.disk.enable'] = false
           profile['browser.cache.memory.enable'] = false
-          #Capybara::Selenium::Driver.new(app, browser: :firefox, profile: profile)
           capabilities = Selenium::WebDriver::Remote::Capabilities.firefox
           Capybara::Selenium::Driver.new(app,
                                           :browser => :remote,
@@ -206,8 +193,6 @@ case ENV['APP']
           config.default_selector = :css
           config.default_max_wait_time = 30
           config.app_host = ENV['SERVER']
-
-          # capybara 2.1 config options
           config.match = :prefer_exact
           config.ignore_hidden_elements = false
         end

@@ -47,7 +47,7 @@ services:
       - back-tier
 
   hub:
-    image: selenium/hub:3.0.1-aluminum
+    image: selenium/hub:2.53.0
     ports:
        - "4444:4444"
 

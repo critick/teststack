@@ -176,6 +176,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     unicode-display_width (1.1.1)
+    wannabe_bool (0.6.0)
     websocket (1.2.3)
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
@@ -223,6 +224,7 @@ DEPENDENCIES
   selenium-webdriver
   site_prism
   test-unit
+  wannabe_bool
   yard
 
 BUNDLED WITH

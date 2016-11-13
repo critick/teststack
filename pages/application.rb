@@ -21,12 +21,17 @@ module Pages
          @pages = {}
        end
 
-       def home
-         @pages[:home] ||= Pages::App::HomePage
+       def login
+         @pages[:login] ||= Pages::App::LoginPage
+       end
+
+       def welcome
+         @pages[:welcome] ||= Pages::App::WelcomePage
        end
 
      end
   end
+
 
 
   module API

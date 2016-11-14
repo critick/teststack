@@ -3,13 +3,14 @@
 ### _Build Anywhere, Test Here_
 
 [![Code Climate](https://codeclimate.com/github/critickio/teststack/badges/gpa.svg)](https://codeclimate.com/github/critickio/teststack)
-[![Build Status](https://travis-ci.org/critickio/teststack.svg?branch=demo)](https://travis-ci.org/critickio/teststack)
+[![Build Status](https://travis-ci.org/critickio/teststack.svg?branch=demo)](https://travis-ci.org/critick/teststack)
 
 This is Testing Framework based on BDD principles in Ruby ,you can use this for  
 
 * automate the tests with step definitions in ruby
 * executable-specifications and live documentation of features
 * execute tests suite for products Web , Mobile and API's interfaces
+* support for executing tests on docker containers
 
 
 ### How to Run Tests
@@ -34,6 +35,7 @@ profile can be any of the below
 
 * api      :run all tests for api
 * web      :run all tests for web
+* moble    :run all tests for web
 
 
 OR if you want to run a single feature only
@@ -64,13 +66,18 @@ $ rake api
 $ rake web
 ```
 
+3.to run appium tests
+```
+$ rake app
+```
+
 ### Setup with Docker
 after installing docker ,you can run any test inside docker containers
 ```
-$ docker-compose up       #for starting example-web app  
-$ rake docker["api"]      #for api tests
-$ rake docker["web"]      #for web tests execution on headless browser
-$ rake docker["webapp"]   #for web tests execution on selenium grid
+$ docker-compose up                       #for starting example-web app  
+$ docker exec teststack rake api          #for api tests
+$ docker exec teststack rake web          #for web tests execution on headless browser
+$ docker exec teststack rake webapp       #for web tests execution on selenium grid
 ```
 
 ##Setup without Docker
@@ -102,7 +109,7 @@ $ rvm install ruby
 Make sure rvm is using the correct ruby by default
 ```
 $ rvm list
-$ rvm --default use 2.2.1
+$ rvm --default use 2.3.0
 ```
 
 If you have an old ruby/rvm, you can example with
@@ -130,8 +137,8 @@ $ gem install bundler
 clone the repo and run bundle install ,all dependencies will be added
 
 ```
-$ git clone git@github.com:irfanah/TestStack.git
-$ cd acceptance_tests
+$ git clone git@github.com:critickio/TestStack.git
+$ cd Teststack
 $ bundle install
 ```
 
@@ -151,27 +158,7 @@ $ mv $PHANTOM_JS /usr/local/share
 $ ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
 ```
 
-3.For Chromedriver
-
-```
-$ gem install chromedriver
-```
-
-4.For Appium
-
-Install appium_console gem.
-```
-$ gem uninstall -aIx appium_lib
-$ gem uninstall -aIx appium_console
-$ gem install --no-rdoc --no-ri appium_console
-```
-Install flaky gem.
-```
-$ gem uninstall -aIx flaky
-$ gem install --no-rdoc --no-ri flaky
-```
-
-Install nodejs using brew.
+3.Install nodejs using brew.
 ```
 $ brew update
 $ brew upgrade node
@@ -179,7 +166,7 @@ $ brew install node
 ```
 Node should be v0.10.26 or better
 
-Install appium
+4.Install appium
 
 ```
 $ npm install -g appium
@@ -266,8 +253,8 @@ $ git clean -dfx; git reset --hard
 └── wiki
 ```
 
-## Wiki
-https://github.com/irfanah/TestStack/wiki
+## WikiP
+https://github.com/critickio/TestStack/wiki
 
 ## Repo Owner
 irfan ahmad, irfan@critick.io

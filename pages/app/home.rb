@@ -1,13 +1,15 @@
 module Pages
   module App
-    module HomePage
-        class << self
+    module WelcomePage
+      class << self
 
-          def verify_login(header_text)
-              $driver.id('actionview_title').text.eql?header_text
-          end
+        String @@toolbar   = 'toolbar'
 
-       end
+        def verify_login(header_text)
+          wait_true { exists { id(@@toolbar) } }
+          id(@@toolbar).text.eql?header_text
+        end
+      end
+    end
   end
- end
 end

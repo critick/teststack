@@ -1,21 +1,16 @@
 Given(/^I am on login page$/) do
-     @app.login.app_permission
+     @app.login
+     @app.login.load_login
 end
 
-When(/^I login in with "([^"]*)" and "([^"]*)"$/) do |number,password|
-    @app.login.log_in(number,password)
+When(/^"([^"]*)" user login to platform$/) do |type|
+    @app.login.log_in
 end
 
-
-Given(/^Settings are "([^"]*)" , "([^"]*)" and "([^"]*)"$/) do |app_status,service_status,email|
-   settings = Settings.new
-   settings.save_pos_setings(app_status,service_status,email)
-end
-
-Then(/^I should see "(.*?)"$/) do |status|
+Then(/^I should see "([^"]*)"$/) do |status|
   case status
-      when "home"
-           @app.home.verify_login("Home")
+  when "welcome"
+          @app.welcome.verify_login("welcome")
       else
           expect(@app.login).to have_toast(status)
   end

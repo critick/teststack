@@ -1,6 +1,7 @@
 FROM ruby:latest
+FROM irfanah/appium-ruby:latest
 
-MAINTAINER irfanahmad.cs@gmail.com
+MAINTAINER irfan@critick.io
 
 ENV PHANTOM_VERSION="phantomjs-2.1.1-linux-x86_64"
 

@@ -11,6 +11,6 @@ Scenario Outline: vote as a single user
 
 Examples:        voted for different option to get success response
 
-                 | choice     | title              |
+                 | choice     | title               |
                  | "bug"      | "Bug vs Feature!"   |
                  | "feature"  | "Bug vs Feature!"   |

@@ -8,7 +8,7 @@ require 'fileutils'
 
 Cucumber::Rake::Task.new(:api) do |t|
   t.cucumber_opts = " -x APP=api
-                      SERVER=http://google.com
+                      SERVER=http://192.168.99.100:5000/
                       features -p api "
 end
 
@@ -21,7 +21,7 @@ Cucumber::Rake::Task.new(:web) do |t|
 end
 
 Cucumber::Rake::Task.new(:webapp) do |t|
-  t.cucumber_opts = " DRIVER=chrome
+  t.cucumber_opts = " DRIVER=firefox
                       APP=web
                       DEBUG=false
                       SERVER=http://192.168.99.100:5000/

@@ -1,7 +1,7 @@
 language: ruby
 
 rvm:
-  - 2.2.0
+  - 2.3.0
 
 gemfile:
   - Gemfile
@@ -13,9 +13,8 @@ before_install:
   - gem install bundler
 
 script:
-  - docker-compose up -d
-  - bundle exec rake docker["api"]
-
+  - bundle install
+  
 branches:
   only:
     - live
